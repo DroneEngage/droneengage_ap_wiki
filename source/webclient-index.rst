@@ -17,6 +17,7 @@ WebClient Project Website
    UDP-Telemetry </webclient-udp-telemetry>
    SWARM Interface <webclient-swarm>
    Gamepad Navigation </webclient-gamepad>
+   Servo Control </webclient-servo>
    Configuration </webclient-configuration>
    FAQ </andruav-faq> 
    Glossary </andruav-glossary> 
