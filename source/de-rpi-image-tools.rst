@@ -15,6 +15,11 @@ RPI Administration Tools
 
 The administration tools for the RPI image are available in the following link https://192.189.9.1:9090 if you are connected to the it as your Access Point
 
+.. important::
+
+    When you connect your RPI board to your home wifi you can **ping droneengage.local** from command prompt to get its IP.
+|
+
 This tool is used for managing your RPI with a simple web interface that allows you to edit settings, and managing files.
 
 

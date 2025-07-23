@@ -29,6 +29,12 @@ Once connected, open a web browser and go to the address: https://192.189.9.1:90
 This will open the Raspberry Pi image tools in your browser. 
 Connecting to Your Home Wi-Fi
 Within the Raspberry Pi image tools (accessed via the steps above), you'll find an option to connect your Raspberry Pi to your home Wi-Fi network. Simply select your network name (SSID) from the available list and enter your Wi-Fi password.
+When you connect your RPI board to your home wifi you can **ping droneengage.local** from command prompt to access it.
+
+.. important::
+
+   Use **ping droneengage.local** from command prompt to get its IP.
+|
 
 Switching Back to Hotspot Mode (If Needed)
 ------------------------------------------
