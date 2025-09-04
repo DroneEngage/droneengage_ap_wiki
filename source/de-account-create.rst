@@ -13,7 +13,7 @@ The same :term:`Access Code` is used to configure the Communication Client (`de_
 .. tip::
     A single account is sufficient for managing multiple drones.
 
-.. youtube:: baHWBc6RvaE
+.. youtube:: WQ7Q4lLhIgA
 
 .. warning::
     Sharing your :term:`Access Code` grants access to your Drone-Engage account to other individuals, potentially allowing them to connect their devices. This functionality can be utilized to enable shared access, such as when collaborating with a ground control station (GCS) operator during a flight.

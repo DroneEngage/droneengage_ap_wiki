@@ -1,31 +1,24 @@
-.. Drone Engage Wiki documentation master file, created by
-   sphinx-quickstart on Tue May 26 12:09:57 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
 Ardupilot Cloud
 ===============
 
 
+.. youtube:: c6wFTDcvxtQ
+
+   
+Welcome to the Ardupilot Cloud Wiki, your guide to using DroneEngage and related tools for drone operations with Ardupilot.
+
 .. toctree::
    :caption: Contents:
    :titlesonly:
-   :maxdepth: 1
-   
-   Drone Engage </de-index>
-   
-   Andruav </andruav-index>
+   :maxdepth: 2
 
+   Introduction </introduction>
+   DroneEngage </de-index>
    WebClient </webclient-index>
+   Developer Guide </de-dev>
+   Legacy/Andruav </andruav-index>
+   FAQ </faq>
+   Glossary </glossary>
+
+
    
-   Server </srv-index>
-
-   Dev-Section </de-dev>
-
-   Obsolete Pages </obsolete-index>
-|
-.. youtube:: c6wFTDcvxtQ
-|
-
-.. _home:
-

@@ -1,28 +1,78 @@
 .. _de-faq:
 
+DroneEngage FAQ
+===============
+
+Find answers to common questions about using DroneEngage with Ardupilot. For additional terms, see :ref:`de-glossary`. Submit new questions via `GitHub Issues <https://github.com/DroneEngage/droneengage_communication/issues>`_.
+
+1. **I don’t understand many terms used in this wiki.**
+
+   - Check the :ref:`de-glossary` for definitions of terms like FCB (Flight Control Board), MAVLink, and JSON.
+   - For a beginner’s overview, see :ref:`de-what-is` or :ref:`de-dev-building-code`.
 
 
-================
-Drone Engage FAQ
-================
+
+2. **I can’t find my Access Code.**
+
+   - Your :term:`Access Code` is sent to your registered email after creating an account (see :ref:`de-account-create`).
+   - Check your spam or junk folder, as it may be filtered.
+   - If still missing, create a new one or contact support via `mohammad.hefny@droneengage.com <mailto:mohammad.hefny@droneengage.com>`_.
 
 
+3. **How many drones and Ground Control Stations (GCS) can connect simultaneously?**
 
-#. I Do Not Understand Many Terminologies in This Site.
-    Please access :ref:`de-glossary` page.
+   - Theoretically unlimited, but depends on:
+     - Network quality (e.g., WiFi or GSM-Modem stability).
+     - Data type (e.g., telemetry, video streaming).
+     - Hardware performance (e.g., Raspberry Pi model).
+   - See :ref:`de-telemetry` for optimizing bandwidth with Smart Telemetry.
 
-#. I Cannot Get my :term:`Access Code`.
-    Sometimes the :term:`Access Code` is filtered out in spam folder. Please check it. 
+4. **Does DroneEngage support Raspberry Pi 5?**
 
-#. How Many Drones and GCS Can be connected simultanously ?
-    Theoretically unlimited. It depends on your network quality and type of data you transfer, it also depends on your Drone GSM-Modem.
+   - Yes, new `RPI-Images <https://cloud.ardupilot.org/downloads/RPI_Full_Images/>`_ runs on RPI-5 as well as RPI-4 & RPIZero W2, as pre-built binaries are for RPI-WZero2 and RPI-4 (Bullseye 64-bit).
+   - Follow :ref:`de-dev-building-code` for compilation steps.
+   - For camera module support, additional changes are needed (see :ref:`de-config-camera`).
 
-#. What is Web-Plugin
-    **[Obsolete]** Web Plugin is a small appplication that can run on Windows or Ubuntu. It allows you to connect Drone-Engage WebClient to Mission Planner, QGround Control or any GCS. You can use Telemetry directly from Web.
-    Please check :ref:`webclient-web-plugin` for more details.
 
-#. Smart Telemetry Levels
-    Smart Telemetry is a feature in Drone-Engage that enables it to use less bandwidth when sending telemetry data. This is useful for your data subscription package. It enables you to get good performance with slower networks. Different levels means lesser packets being sent and some non important packets are being almost filtered. The high the level the less the bandwidth and connection speed required as well as the less screen update on GCS.
+5. **How do I update to the latest DroneEngage binaries?**
 
-#. Does DroneEngage support RPI-5?
-    Yes but you need to compile code on RPI-5 please check :ref:`de-dev-building`. It is straight forward. However you need some changes to run camera module.
+   - Download the latest binaries from `https://cloud.ardupilot.org/downloads/RPI/Latest/ <https://cloud.ardupilot.org/downloads/RPI/Latest/>`_ (e.g., Drone_Engage_24Jul_2025.zip for telemetry, Drone_Engage_Camera_24Jul_2025.zip for camera).
+   - Follow :ref:`de-install-unit` for installation steps.
+   - Always verify the latest versions, as they update periodically.-
+   - `READY-IMAGES <https://cloud.ardupilot.org/downloads/RPI_Full_Images/droneengage_rpi/>`_ setups are always more consistent and easier to install. 
+
+
+6. **Why is my MAVLink connection failing?**
+
+   - Ensure the correct `fcb_connection_uri` settings in :ref:`de-config-mavlink` (e.g., UDP or serial port).
+   - Check that TX/RX pins are correctly connected between Raspberry Pi and :term:`FCB`.
+   - Verify the baudrate matches your Flight Control Board settings.
+   - If using dynamic port detection, ensure `dynamic: true` is set in the JSON config.
+
+
+7. **How do I use the RPI Image Tools?**
+
+   - Use the Navigator (:ref:`de-rpi-image-tools-navigator`) to manage files.
+   - Use the Configurator (:ref:`de-rpi-image-tools-configurator`) to edit JSON files like `de_comm.config.module.json`.
+   - Use the Terminal (:ref:`de-rpi-image-tools-terminal`) for advanced CLI commands.
+
+
+8. **What is Smart Telemetry, and how do I adjust it?**
+
+   - Smart Telemetry reduces bandwidth by filtering non-critical data, ideal for slower networks.
+   - Adjust levels (0–3) in `de_mavlink.config.module.json` (see :ref:`de-config-mavlink`).
+     - Level 0: No optimization (full data).
+     - Level 3: Maximum optimization (minimal data, slower GCS updates).
+
+
+9. **Can I test DroneEngage without a drone?**
+
+   - Yes, use Software-in-the-Loop (SITL) to simulate a drone on your computer.
+   - See :ref:`de-simulators` for setup instructions.
+
+
+10. **How do I contribute to the wiki or report issues?**
+
+    - Edit content by submitting pull requests to `https://github.com/DroneEngage/droneengage_ap_wiki <https://github.com/DroneEngage/droneengage_ap_wiki>`_ (see :ref:`de-contributing`).
+    - Report issues or suggest FAQs via GitHub Issues.
+

@@ -89,7 +89,7 @@ Channel reverse and scale is set from Andruav-Drone settings. This is a very imp
    :alt: XBox Wired Gamepad
 
 
-5. Smart RCMAP can be enabled on :ref:`what-is-drone-engage` only. This feature allows using Gamepad without maping channels. The system will automatically map it using RCMap infrom from ardupilot. 
+5. Smart RCMAP can be enabled on :ref:`de-what-is` only. This feature allows using Gamepad without maping channels. The system will automatically map it using RCMap infrom from ardupilot. 
 However you can set maximum and minimum ranges from **config.module.json**
 
 

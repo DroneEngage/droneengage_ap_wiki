@@ -1,3 +1,4 @@
+.vscode
 # Any build directory
 build/*
 
@@ -6,3 +7,6 @@ build/*
 
 # Build outputs
 *.pyc
+checks.json
+coding-times.db
+TODO.TXT
