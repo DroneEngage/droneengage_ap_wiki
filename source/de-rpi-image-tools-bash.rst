@@ -36,6 +36,18 @@ Prevents DE binaries from starting on boot.
 **Stop DE**
 Stops the DE binaries, but they will restart on the next boot.
 
+**Enable RPI-CAM**
+Allow DE Camera Module to start automatically on boot.
+
+**Disable RPI-CAM**
+Prevents DE Camera Module from starting on boot.
+
+**Start Simulator**
+Start the built-in two-drones simulator.
+
+**Stop Simulator**
+Stops the built-in two-drones simulator.
+
 **Clear Logs**
 Deletes logs from the RPI image to free up space, but does not affect media or configuration files.
 

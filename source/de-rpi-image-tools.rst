@@ -32,6 +32,7 @@ Tools available in the RPI image are:
    
    DE Wifi Manager </de-rpi-image-tools-wifi>
    DE App Start/Stop </de-rpi-image-tools-bash>
+   DE Account Setup </de-rpi-image-tools-account>
    DE Configurator </de-rpi-image-tools-configurator>
    Navigator </de-rpi-image-tools-navigator>
    Terminal </de-rpi-image-tools-terminal>

@@ -45,8 +45,26 @@ If you ever need to, you can switch your Raspberry Pi back into a Wi-Fi hotspot.
     **Important**: For DroneEngage to function correctly, your Raspberry Pi needs to be connected to either a Wi-Fi network or a GSM network. It cannot operate while in the temporary DE_ADMIN hotspot mode.
 
 
-
+|
     
-    
+Troubleshooting Wi-Fi Connectivity
+----------------------------------
 
+If you've entered an incorrect Wi-Fi password and can no longer access your Raspberry Pi, you have two solutions to regain access and update the password.
 
+- **Solution 1**: Using a Wired Connection (for RPI 4 & RPI 5)
+If you are using a Raspberry Pi 4 or Raspberry Pi 5, you can resolve the issue by using a wired network connection.
+
+   - Connect an Ethernet cable from your network to the Raspberry Pi.
+   - Once connected, access the administration site.
+   - Re-enter the correct Wi-Fi password on the administration page.
+
+- **Solution 2**: Using the SD Card (for RPI Zero 2 W or if LAN is Unavailable)
+If an Ethernet cable is not an option or if you're using a Raspberry Pi Zero 2 W, you can activate the access point by modifying the SD card.
+
+   - Power off the Raspberry Pi and remove the SD card.
+   - Insert the SD card into a computer.
+   - Navigate to the boot folder on the SD card.
+   - Create a new file in this folder and name it **activate_ap.txt**. The content of the file is irrelevant; only its existence is necessary.
+   - Safely eject the SD card from your computer.
+   - Reinsert the SD card into the Raspberry Pi and power it on. The DE_ADMIN access point will now be reactivated, allowing you to connect and update your Wi-Fi settings.
