@@ -15,6 +15,7 @@ Welcome to the Ardupilot Cloud Wiki, your guide to using DroneEngage and related
    Introduction </introduction>
    DroneEngage </de-index>
    WebClient </webclient-index>
+   Server </srv-index>
    Developer Guide </de-dev>
    Legacy/Andruav </andruav-index>
    FAQ </faq>

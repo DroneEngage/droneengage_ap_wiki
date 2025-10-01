@@ -7,11 +7,9 @@ Air-Gap RPI-4 Backend-Server Deployment
 The DroneEngage Air-Gap Server is designed to provide a robust and secure, self-contained server solution, particularly valuable in situations where internet connectivity is unreliable, restricted, or entirely prohibited.
 
 
-For a **ready image** please check, please check the following options:
+.. youtube:: mHRhm1bP3aQ
 
-:ref:`srv-install-airgap-ready-image-wo-ap`
-
-:ref:`srv-install-airgap-ready-image-w-ap`
+|
 
 
 Standalone Functionality:
