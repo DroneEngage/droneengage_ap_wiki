@@ -38,6 +38,7 @@ extensions = [
     'sphinx.ext.imgmath',
     'sphinx.ext.ifconfig',
     'sphinx.ext.imgconverter',
+    'sphinx.ext.extlinks',
     #'recommonmark',
     #https://sphinxcontrib-youtube.readthedocs.io/en/latest/
     'sphinxcontrib.youtube', #For youtube embedding
@@ -45,15 +46,14 @@ extensions = [
     'sphinx.ext.autosectionlabel'
 ]
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates','_static']
+templates_path = ['_templatesx', '_static']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = []
 
-[extensions]
-todo_include_todos=True
+todo_include_todos = True
 rst_prolog = """
 .. |br| raw:: html
 
@@ -62,6 +62,16 @@ rst_prolog = """
 
 # -- Options for HTML output -------------------------------------------------
 
+extlinks = {
+    # Web client root and pages
+    'web': ('https://cloud.ardupilot.org:8001/%s', ''),
+
+    # Direct "accounts" shortcut (same base, convenient alias)
+    'accounts': ('https://cloud.ardupilot.org:8001/%s', ''),
+
+    # Downloads root and subpaths
+    'dl': ('https://cloud.ardupilot.org/downloads/%s', ''),
+}
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
@@ -101,9 +111,6 @@ source_suffix = {
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
-
-# The master toctree document.
-master_doc = 'index'
 
 
 
