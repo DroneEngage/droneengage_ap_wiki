@@ -13,7 +13,7 @@ RPI Administration Tools
 
 
 
-The administration tools for the RPI image are available in the following link https://192.189.9.1:9090 if you are connected to the it as your Access Point
+The administration tools for the RPI image are available in the following link https://192.169.9.1:9090 if you are connected to the it as your Access Point
 
 .. important::
 

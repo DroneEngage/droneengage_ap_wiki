@@ -25,7 +25,7 @@ Here's how to connect using this temporary network:
 On your laptop or another device, open your Wi-Fi settings. 
 Look for and connect to the network named **DE_ADMIN**. 
 When prompted, enter the password: **droneengage**. 
-Once connected, open a web browser and go to the address: https://192.189.9.1:9090. 
+Once connected, open a web browser and go to the address: https://192.169.9.1:9090. 
 This will open the Raspberry Pi image tools in your browser. 
 Connecting to Your Home Wi-Fi
 Within the Raspberry Pi image tools (accessed via the steps above), you'll find an option to connect your Raspberry Pi to your home Wi-Fi network. Simply select your network name (SSID) from the available list and enter your Wi-Fi password.

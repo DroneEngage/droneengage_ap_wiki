@@ -17,7 +17,7 @@ Download Image from `Here <https://cloud.ardupilot.org/downloads/RPI_Full_Images
 
 Once you run this image an AP will be created with the name **DE_ADMIN** and password **droneengage**.
 
-to access the admin website use URL `https://192.189.9.1:9090 <https://192.189.9.1:9090>`_ when you are connected to this AP.
+to access the admin website use URL `https://192.169.9.1:9090 <https://192.169.9.1:9090>`_ when you are connected to this AP.
 
 
 username/password:  **pi/raspberry**
