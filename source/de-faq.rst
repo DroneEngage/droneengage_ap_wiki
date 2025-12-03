@@ -53,7 +53,6 @@ Find answers to common questions about using DroneEngage with Ardupilot. For add
 7. **How do I use the RPI Image Tools?**
 
    - Use the Navigator (:ref:`de-rpi-image-tools-navigator`) to manage files.
-   - Use the Configurator (:ref:`de-rpi-image-tools-configurator`) to edit JSON files like `de_comm.config.module.json`.
    - Use the Terminal (:ref:`de-rpi-image-tools-terminal`) for advanced CLI commands.
 
 
