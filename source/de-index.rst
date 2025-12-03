@@ -1,35 +1,51 @@
 .. _de-index:
 
-.. Drone Engage Wiki documentation master file, created by
-   sphinx-quickstart on Tue May 26 12:09:57 2020.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+========================
+DroneEngage Documentation
+========================
 
-Drone Engage Project Website
-============================
+DroneEngage is a cloud-based companion computer software for Ardupilot-based drones, providing unlimited range telemetry, video streaming, and advanced fleet management capabilities.
+
+.. youtube:: by1-t7By9LQ
+
+|
 
 .. toctree::
-   :caption: Contents:
+   :caption: Getting Started
    :titlesonly:
    :maxdepth: 1
    
-   What is Drone Engage </de-what-is>
-   Getting Started </de-getting-started>
-   Drone-Engage Web Client </de-web-client>
-   Drone-Engage Telemetry </de-telemetry>
-   Drone-Engage Advanced Features </de-advanced>
-   Drone-Engage Plugins </de-plugins>
-   Using Drone-Engage with SITL </de-simulators>
+   What is DroneEngage? </de-what-is>
+   Getting Started Guide </de-getting-started>
+
+.. toctree::
+   :caption: Using DroneEngage
+   :titlesonly:
+   :maxdepth: 1
+   
+   Web Client </de-web-client>
+   Telemetry </de-telemetry>
+   Advanced Features </de-advanced>
+   Plugins </de-plugins>
+   Simulation (SITL) </de-simulators>
    Use Cases </de-use-cases>
-   Unit Installation & Administration</de-install>
-   Dev-Section </de-dev>
+
+.. toctree::
+   :caption: Installation & Administration
+   :titlesonly:
+   :maxdepth: 1
+   
+   Installation Guide </de-install>
+
+.. toctree::
+   :caption: Reference
+   :titlesonly:
+   :maxdepth: 1
+   
+   Developer Guide </de-dev>
    FAQ </de-faq> 
-   Glossary </de-glossary> 
-
-
-|
-.. youtube:: by1-t7By9LQ
-|
+   Glossary </de-glossary>
+   Contributing </de-contributing>
 
 
 .. _home:

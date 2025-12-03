@@ -4,19 +4,32 @@
 Plugins
 =======
 
+DroneEngage's modular architecture allows extending functionality through plugins. Plugins can interface with custom hardware, sensors, and external systems.
+
+|
+
+Available Plugins
+=================
+
 .. toctree::
-   :caption: Contents:
    :titlesonly:
    :maxdepth: 1
 
+   SDR Plugin </de-plugin-sdr>
+   Sound Plugin </de-plugin-sound>
+   GPIO Plugin </de-plugin-gpio>
 
-    SDR Plugin </de-plugin-sdr>
-    Sound Plugin </de-plugin-sound>
-    GPIO Plugin </de-plugin-gpio>
+|
 
+Plugin Development
+==================
 
-DroneEngage architecture is very flexible and allows to add new plugins to the system. The plugins can be used to extend the functionality of unit and allow adding custom devices and sensors.
+Plugins can be written in:
 
-Plugins can be written in Python, nodejs and of course C++. Please refer to :ref:`de-dev-plugin` for more information.
+- **C++** - For performance-critical applications
+- **Python** - For rapid prototyping and scripting
+- **Node.js** - For web-integrated solutions
 
-.. _home:
+All plugins communicate with the main DroneEngage system via the DataBus protocol.
+
+See :ref:`de-dev-plugin` for detailed development instructions.

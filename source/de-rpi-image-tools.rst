@@ -5,37 +5,66 @@
 RPI Administration Tools
 ========================
 
-
-
+The DroneEngage RPI image includes a web-based administration interface for easy configuration and management of your unit.
 
 .. youtube::  -mV9EARM0_0
 
-
-
-
-The administration tools for the RPI image are available in the following link https://192.169.9.1:9090 if you are connected to the it as your Access Point
-
-.. important::
-
-    When you connect your RPI board to your home wifi you can **ping droneengage.local** from command prompt to get its IP.
 |
 
-This tool is used for managing your RPI with a simple web interface that allows you to edit settings, and managing files.
+Accessing the Admin Interface
+=============================
 
+**When connected to the RPI Access Point:**
 
-Tools available in the RPI image are:
-=====================================
+URL: ``https://192.168.9.1:9090``
+
+**When RPI is on your WiFi network:**
+
+1. Find the IP address: ``ping droneengage.local``
+2. Access: ``https://<RPI_IP>:9090``
+
+.. important::
+   The admin interface uses HTTPS. Your browser may show a security warning - this is normal for self-signed certificates.
+
+|
+
+Available Tools
+===============
 
 .. toctree::
    :titlesonly:
    :maxdepth: 1
    
-   DE Wifi Manager </de-rpi-image-tools-wifi>
-   DE Account Setup </de-rpi-image-tools-account>
-   DE App Management </de-rpi-image-tools-bash>
-   DE Moduler Update </de-rpi-image-module-updater>
-   Navigator </de-rpi-image-tools-navigator>
+   WiFi Manager </de-rpi-image-tools-wifi>
+   Account Setup </de-rpi-image-tools-account>
+   App Management </de-rpi-image-tools-bash>
+   Module Updater </de-rpi-image-module-updater>
+   File Navigator </de-rpi-image-tools-navigator>
    Terminal </de-rpi-image-tools-terminal>
+
+|
+
+Quick Reference
+===============
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Tool
+     - Purpose
+   * - **WiFi Manager**
+     - Configure network connectivity and Access Point
+   * - **Account Setup**
+     - Enter DroneEngage credentials and server settings
+   * - **App Management**
+     - Start/stop services, enable autostart, run simulator
+   * - **Module Updater**
+     - Update DroneEngage modules to latest versions
+   * - **File Navigator**
+     - Browse and edit configuration files
+   * - **Terminal**
+     - Run Linux commands directly on the RPI
    
 
 

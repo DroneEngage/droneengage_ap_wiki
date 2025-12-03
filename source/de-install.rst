@@ -1,22 +1,33 @@
 .. _de-install:
 
-=========================
-Drone Engage Installation
-=========================
+==============================
+Installation & Administration
+==============================
 
+This section covers installing DroneEngage on your Raspberry Pi and administering your unit through the web-based tools.
 
 .. youtube:: XwF4L1qM_WQ
 
+|
 
 .. toctree::
-   :caption: Contents:
+   :caption: Installation
    :titlesonly:
    :maxdepth: 1
 
-   Installing DroneEngage on Raspberry PI </de-install-unit>
-   Administrating DroneEngage Unit </de-rpi-image-tools>
-   
+   Installing DroneEngage </de-install-unit>
 
+.. toctree::
+   :caption: Administration
+   :titlesonly:
+   :maxdepth: 1
+
+   RPI Administration Tools </de-rpi-image-tools>
+
+.. toctree::
+   :caption: Configuration
+   :titlesonly:
+   :maxdepth: 1
 
 Video Tutorials
 ---------------

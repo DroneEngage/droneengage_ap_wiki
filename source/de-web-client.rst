@@ -1,33 +1,40 @@
 .. _de-web-client:
 
 
-=======================
-Drone-Engage Web Client
-=======================
+==========
+Web Client
+==========
 
-Drone-Engage Web Client is website where you can track and control your drone from it.
+The DroneEngage Web Client is a browser-based ground control station for monitoring and controlling your drones from anywhere in the world.
 
-
-Drone-Engage Web-Client URL: `https://droneengage.com:8021/webclient.html <https://droneengage.com:8021/webclient.html>`_
-
-
+**Access the Web Client:** `https://droneengage.com:8021/webclient.html <https://droneengage.com:8021/webclient.html>`_
 
 .. youtube:: To3sngcdvh4&t=7s
 
 |
 
-Main Features
-=============
+Key Features
+============
 
-#. Ability to control multiple drones at the same time.
+- **Multi-Drone Control** - Monitor and control multiple drones simultaneously
+- **Video Streaming** - View live video feeds from multiple drones at once
+- **Photo Capture** - Take photos remotely and download them
+- **GamePad Support** - Connect Xbox/PlayStation controllers for smooth remote flying
+- **GCS Integration** - Forward telemetry to Mission Planner or QGroundControl via :ref:`webclient-web-plugin`
 
-#. Ability to stream videos from multiple drones simultaneously.
-
-#. Ability to take photos.
-
-#. Ability to connect GamePad directly to web and fly drone smoothly.
-
-#. Ability to connect web client to QGroundControl or Mission Planner using :ref:`webclient-web-plugin` 
-
+|
 
 .. youtube:: YwEw_YSFVEo
+
+|
+
+Getting Started
+===============
+
+1. Navigate to the `Web Client <https://droneengage.com:8021/webclient.html>`_
+2. Log in with your DroneEngage account credentials
+3. Your connected drones will appear in the interface
+4. Click on a drone to view its status, video feed, and controls
+
+.. tip::
+   For the best experience, use a modern browser (Chrome, Firefox, Edge) with hardware acceleration enabled.

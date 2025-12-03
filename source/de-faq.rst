@@ -1,9 +1,12 @@
 .. _de-faq:
 
+===============
 DroneEngage FAQ
 ===============
 
 Find answers to common questions about using DroneEngage with Ardupilot. For additional terms, see :ref:`de-glossary`. Submit new questions via `GitHub Issues <https://github.com/DroneEngage/droneengage_communication/issues>`_.
+
+|
 
 1. **I don’t understand many terms used in this wiki.**
 
@@ -38,7 +41,7 @@ Find answers to common questions about using DroneEngage with Ardupilot. For add
 
    - Download the latest binaries from `https://cloud.ardupilot.org/downloads/RPI/Latest/ <https://cloud.ardupilot.org/downloads/RPI/Latest/>`_ (e.g., Drone_Engage_24Jul_2025.zip for telemetry, Drone_Engage_Camera_24Jul_2025.zip for camera).
    - Follow :ref:`de-install-unit` for installation steps.
-   - Always verify the latest versions, as they update periodically.-
+   - Always verify the latest versions, as they update periodically.
    - `READY-IMAGES <https://cloud.ardupilot.org/downloads/RPI_Full_Images/droneengage_rpi/>`_ setups are always more consistent and easier to install. 
 
 

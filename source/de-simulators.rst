@@ -1,22 +1,37 @@
 .. _de-simulators:
 
 
-=============================
-Simulation using SITL
-=============================
+==========
+Simulation
+==========
 
-You do not need to have a real drone to test Drone-Engage cabapilities. Actually it is recommended to use `SITL <https://ardupilot.org/dev/docs/sitl-simulator-software-in-the-loop.html>`_ simulation to test Drone-Engage before actually flying long range with your drone. 
+Test DroneEngage without a real drone using Software-in-the-Loop (SITL) simulation. This is **highly recommended** before flying long-range missions.
 
-If you want more real action then maybe you can try `Webots SITL <https://ardupilot.org/dev/docs/sitl-with-webots.html>`_ to have a real taste of how using Drone-Engage really feels.
+.. youtube:: FY6t9LyXpBw
 
-.. youtube:: c5CJaRH9Pig
-
-
-
-Please check :ref:`webclient-udp-telemetry`
+|
 
 
+DroneEngage RPI Image comes with built-in simulator for 2 Drones. It takes a minute to start the simulator and access it on WebClient.
 
-.. todo::
 
-   Adding specific Drone-Engage Features.
+
+Why Use Simulation?
+===================
+
+- **Safe Testing** - Test all features without risking hardware
+- **Learn the Interface** - Familiarize yourself with the web client
+- **Debug Issues** - Troubleshoot configuration problems
+- **Develop Missions** - Plan and test complex missions
+
+|
+
+
+
+
+For More Detailed Information check this video:
+
+.. youtube:: ABedUUbf2gc
+
+|
+

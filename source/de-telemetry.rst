@@ -1,46 +1,64 @@
 .. _de-telemetry:
 
-======================
-Drone-Engage Telemetry
-======================
+=========
+Telemetry
+=========
 
-|
+DroneEngage provides unlimited range telemetry over 4G/LTE networks, enabling drone control from anywhere in the world.
+
 .. youtube:: rZ-UkhF3WYw
+
 |
-
-
-
 
 .. toctree::
-   :caption: Contents:
    :titlesonly:
-   :maxdepth: 2
+   :maxdepth: 1
 
-   Web UDP Telemetry </webclient-udp-telemetry>
+   UDP Telemetry Forwarding </webclient-udp-telemetry>
 
+|
 
+Connection Options
+==================
 
-Drone-Engage integrates with `Ardupilot-based flight control boards <https://ardupilot.org/copter/docs/common-autopilots.html>`_. Drone-Engage can connect to these boards via Serial, Bluetooth, Wifi, USB, TCP and UDP connections. 
+DroneEngage connects to `Ardupilot-based flight controllers <https://ardupilot.org/copter/docs/common-autopilots.html>`_ via:
 
-The below video might be a record-breaking telemetry range for RC. In the following video you can see a car is being control in Cairo Egypt.driver is in Los-Angeles USA. **Andruav 12,193 km RC Car Demo**.
+- **Serial** - Direct UART connection (recommended)
+- **USB** - Via USB-to-serial adapter
+- **UDP** - Network connection (for SITL or networked setups)
+- **TCP** - Network connection
+- **Bluetooth/WiFi** - Wireless local connections
 
-The first Video captured in USA
+|
+
+Smart Telemetry
+===============
+
+DroneEngage includes bandwidth optimization (Smart Telemetry) that reduces data usage on slower networks:
+
+- **Level 0** - No optimization (full data rate)
+- **Level 1** - Light optimization
+- **Level 2** - Moderate optimization
+- **Level 3** - Maximum optimization (minimal bandwidth)
+
+Configure in ``de_mavlink.config.module.json`` via the ``default_optimization_level`` field.
+
+|
+
+World Record Demo
+=================
+
+DroneEngage (formerly Andruav) demonstrated **12,193 km telemetry range** - controlling a car in Cairo, Egypt from Los Angeles, USA.
+
+**View from USA:**
 
 .. youtube:: DmpX-D10GyQ
 
-
-While the second is captured in Egypt
+**View from Egypt:**
 
 .. youtube:: Kh4NU3FaFeE
 
-
-Both are the same exact video filmed from two places.
-
 .. tip::
-
-   **Andruav 12,193 km RC Car Demo** :ref:`here <de-telemetry>` is done by connecting joystick to Mission Planner via Andruav Telemetry. However it is recommended to use `GamePad Directly <https://andruav.com/webclient-gamepad.html>`_.
-
-
-Although the video was made using Andruav at that time. Drone-Engage is even more capable and more optimized for this types of missions.
+   For remote control, use the :ref:`webclient-gamepad` feature for the best experience.
 
 

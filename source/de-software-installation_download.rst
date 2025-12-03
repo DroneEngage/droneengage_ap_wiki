@@ -8,7 +8,7 @@ Drone Engage RPI-WZero2 / RPI-4 Ready Image
 
 You can download a ready-made image from here:
 
-Download Image from `Here <https://cloud.ardupilot.org/downloads/RPI_Full_Images/droneengage_rpi/rpi_wzero_2_drone_engage_w_camera.xz>`_ .
+Download Image from `Here <https://cloud.ardupilot.org/downloads/RPI_Full_Images/>`_ .
 
 
 .. youtube::  -mV9EARM0_0
