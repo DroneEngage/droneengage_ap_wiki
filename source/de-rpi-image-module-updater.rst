@@ -3,9 +3,7 @@ DE Module Updater
 
 The **DE Module Updater** screen allows you to update, manage, and maintain DroneEngage software modules on your unit. You can update individual modules, perform bulk updates, backup configurations, and check installed versions.
 
-.. image:: ./images/de_rpi_image_module_updater.png
-   :alt: DE Module Updater Screen
-   :align: center
+.. youtube:: 69fpE9wcVpY
 
 .. warning::
    This tool updates DroneEngage modules from the release server. Use with caution and always backup your configuration files before performing updates.
@@ -286,6 +284,14 @@ If you prefer to restore from backup files:
    Blindly overwriting new config files with old backups may cause modules to fail or behave unexpectedly.
 
 ----
+
+|
+
+.. image:: ./images/de_rpi_image_module_updater.png
+   :alt: DE Module Updater Screen
+   :align: center
+
+|
 
 Typical Workflows
 -----------------
