@@ -1,8 +1,63 @@
-.. _de-select-hardware:
+.. _de-hw_2:
 
-====================
-Select Your Hardware
-====================
+=================================
+DroneEngage Hardware Requirements
+=================================
+
+
+Requirements
+============
+
+**Essential:**
+
+- Raspberry Pi (Zero W, Zero 2 W, 3, 4, or 5)
+- 4G/LTE USB modem or HAT for internet connectivity
+- Ardupilot or PX4 flight controller
+- DroneEngage account and Access Code from `cloud.ardupilot.org <https://cloud.ardupilot.org>`_
+
+**Optional:**
+
+- Camera(s) connected to the Raspberry Pi
+- Xbox/PlayStation controller for remote piloting
+
+|
+
+.. note::
+   DroneEngage is the Linux-based successor to `Andruav <https://cloud.ardupilot.org/downloads/Android/>`_, the Android companion app.
+
+|
+
+Hardware Examples
+=================
+
+DroneEngage runs on various Raspberry Pi boards, from the tiny RPI-Zero for telemetry-only setups to the powerful RPI-4 for multi-camera streaming.
+
+.. image:: ./images/setup1.png
+   :align: center
+   :alt: DroneEngage on RPI-Zero connected to OBAL board.
+
+|
+
+**Lightweight Setup (Telemetry Only)**
+
+The RPI-Zero setup weighs only **42 grams (1.48 oz)** - everything needed for full drone control from anywhere.
+
+.. image:: ./images/rpizeroweight.jpeg
+   :align: center
+   :alt: DroneEngage on RPI-Zero
+
+|
+
+**Video Streaming Setup**
+
+For video streaming, use the Raspberry Pi Zero 2 W at only **52.2g (1.84 oz)** including camera and OTG cable. For multiple cameras, use the RPI-4.
+
+.. image:: ./images/IMG_20220402_160422.jpg
+   :align: center
+   :alt: DroneEngage on RPI-Zero-2 with camera
+
+
+
 
 A Raspberry Pi board with internet connectivity is required.  Supported models include the Raspberry Pi 2, 3, 4, and Zero/Zero 2.  The chosen model influences system capabilities.  The Raspberry Pi 4 is recommended for applications requiring multi-camera video streaming, enabling simultaneous streaming from multiple connected cameras.
 
@@ -31,3 +86,5 @@ The `Mangopi MQ-Quad MCore H616   <https://mangopi.org/h616/>`_  (https://mangop
 
 .. tip::
     For optimal performance, it is recommended to use the Raspberry Pi Zero for telemetry-only functions, and the Raspberry Pi Zero 2 W or Raspberry Pi 4 for combined telemetry and video streaming.
+
+

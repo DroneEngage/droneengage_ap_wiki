@@ -14,13 +14,12 @@ Welcome to the Ardupilot Cloud Wiki, your guide to using DroneEngage and related
                
    What is DroneEngage? </de-what-is>
    Getting Started </de-getting-started-index>
-   WebClient </webclient-index>
-   Standalone Server </srv-install-airgap>
    Server </srv-index>
    DroneEngage </de-index>
+   Simulation (SITL) </de-simulators>
    Developer Guide </de-dev>
    Legacy/Andruav </andruav-index>
-   FAQ </faq>
+   FAQ </de-faq>
    Glossary </glossary>
 
 

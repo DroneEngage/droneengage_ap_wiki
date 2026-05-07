@@ -15,7 +15,7 @@ Explore real-world applications and configurations for DroneEngage.
    :maxdepth: 1
 
    All-In-One Board (RPI as FCB + Companion) </de-all-in-one>
-
+   First Longe Range Intercontenental Controlled Rover </de-usa-rover>
 |
 
 Common Applications

@@ -61,6 +61,7 @@ Requirements
 **Essential:**
 
 - Raspberry Pi (Zero W, Zero 2 W, 3, 4, or 5)
+- Radxa Board (Rock Pi 5, etc.) for more powerful processing.
 - 4G/LTE USB modem or HAT for internet connectivity
 - Ardupilot or PX4 flight controller
 - DroneEngage account and Access Code from `cloud.ardupilot.org <https://cloud.ardupilot.org>`_
@@ -69,46 +70,11 @@ Requirements
 
 - Camera(s) connected to the Raspberry Pi
 - Xbox/PlayStation controller for remote piloting
+- Sony IMX500 RPI-AI for DroneEngage AI capabilities
+- Additional sensors or payloads (SDR, Light LEDS, Loud Speakers ...etc.)
 
 |
 
 .. note::
-   DroneEngage is the Linux-based successor to `Andruav <https://play.google.com/store/apps/details?id=arudpilot.andruav&hl=en&gl=US>`_, the Android companion app.
-
-|
-
-Hardware Examples
-=================
-
-DroneEngage runs on various Raspberry Pi boards, from the tiny RPI-Zero for telemetry-only setups to the powerful RPI-4 for multi-camera streaming.
-
-.. image:: ./images/setup1.png
-   :align: center
-   :alt: DroneEngage on RPI-Zero connected to OBAL board.
-
-|
-
-**Lightweight Setup (Telemetry Only)**
-
-The RPI-Zero setup weighs only **42 grams (1.48 oz)** - everything needed for full drone control from anywhere.
-
-.. image:: ./images/rpizeroweight.jpeg
-   :align: center
-   :alt: DroneEngage on RPI-Zero
-
-|
-
-**Video Streaming Setup**
-
-For video streaming, use the Raspberry Pi Zero 2 W at only **52.2g (1.84 oz)** including camera and OTG cable. For multiple cameras, use the RPI-4.
-
-.. image:: ./images/IMG_20220402_160422.jpg
-   :align: center
-   :alt: DroneEngage on RPI-Zero-2 with camera
-
-
-
-
-
-
+   DroneEngage is the Linux-based successor to `Andruav <https://cloud.ardupilot.org/downloads/Android/>`_, the Android companion app.
 

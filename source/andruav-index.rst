@@ -21,7 +21,6 @@ Andruav Project Website
    Andruav Advanced Features </andruav-advanced>
    Using Andruav with SITL </andruav-simulators>
      
-   FAQ </andruav-faq> 
    Glossary </andruav-glossary> 
 
 
