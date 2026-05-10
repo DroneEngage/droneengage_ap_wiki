@@ -36,8 +36,17 @@ Local Domain and Secure SSL:
  * The inclusion of secure SSL (Secure Sockets Layer) ensures that communication between devices within the local network is encrypted, protecting data from unauthorized interception.
 
 
-Local Maps:
------------
+|
+
+
+==========
+Local Maps
+==========
+
+|
+.. youtube:: QivckjIQ9Sk
+
+|
 
  * A key feature is the ability to host local maps. This is particularly important for drone operations, where real-time geospatial data is essential.
 

@@ -18,13 +18,6 @@ DroneEngage offers powerful features beyond basic telemetry and video streaming.
    TX Freeze </de-tx-freeze>
 
 .. toctree::
-   :caption: Remote Control
-   :titlesonly:
-   :maxdepth: 1
-
-   GamePad Navigation </webclient-gamepad>
-
-.. toctree::
    :caption: Multi-Drone Operations
    :titlesonly:
    :maxdepth: 1

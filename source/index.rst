@@ -16,8 +16,10 @@ Welcome to the Ardupilot Cloud Wiki, your guide to using DroneEngage and related
    Getting Started </de-getting-started-index>
    Server </srv-index>
    DroneEngage </de-index>
+   Developer Guide </de-dev.md>
+   Scenarios</scenarios/de-scenarios>
+   Use Cases </use-cases/de-use-cases>
    Simulation (SITL) </de-simulators>
-   Developer Guide </de-dev>
    Legacy/Andruav </andruav-index>
    FAQ </de-faq>
    Glossary </glossary>

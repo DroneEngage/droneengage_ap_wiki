@@ -21,12 +21,12 @@ DroneEngage is a cloud-based companion computer software for Ardupilot-based dro
    :maxdepth: 1
    
    Web Client </de-web-client>
+   DE Camera Module </de-camera>
    Telemetry </de-telemetry>
    GamePad </webclient-gamepad>
    Advanced Features </de-advanced>
    Plugins </de-plugins>
-   Use Cases </de-use-cases>
-
+   
    UDP-Telemetry </webclient-udp-telemetry>
    SWARM Interface <webclient-swarm>
    Gamepad Navigation </webclient-gamepad>

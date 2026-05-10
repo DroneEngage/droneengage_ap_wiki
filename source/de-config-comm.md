@@ -1,8 +1,6 @@
 # de_comm.config.module.json Configuration File
 
-A file called **de_comm.config.module.json** exists in **/home/pi/drone_engage/de_comm/**
-This file is written in JSON format. However, you can still add comments to the file.
-To those who do not know JSON just consider it a text file that you need to edit only few lines in it.
+A file called **de_comm.config.module.json** exists in **/home/pi/drone_engage/de_comm/**. This file is written in JSON format. However, you can still add comments to the file. To those who do not know JSON just consider it a text file that you need to edit only few lines in it.
 
 ## Accessing the Configuration File
 
@@ -27,30 +25,30 @@ nano de_comm.config.module.json
 
 ## Configuration Fields
 
-| Field Name | Description | Example |
-|------------|-------------|---------|
-| **module_id** | A name and GUID for this module | "MT_1", "COMM_MAIN" |
-| **unit_type** | Type of unit. Use "control_unit" for drone modules | "control_unit" |
-| **s2s_udp_listening_ip** (*) | IP address for the de_comm module to communicate with other modules | "127.0.0.1" if all modules on same board, else "0.0.0.0" |
-| **s2s_udp_listening_port** (*) | UDP port used to communicate with other modules | "60000" |
-| **s2s_udp_packet_size** (*) | Maximum size of UDP packets, should be same value in all modules | "8192" |
-| **auth_ip** (*) | Authentication server IP address | "127.0.0.1", "andruav.com", "droneengage.com" |
-| **auth_port** (*) | Authentication server port (number, not string) | 19408 |
-| **auth_verify_ssl** (*) | Enable SSL verification for authentication | false |
-| **ignore_original_comm_server** (*) | Don't authenticate and connect directly to a drone server | false |
-| **root_certificate_path** (*) | Path to SSL certificate (required if auth_verify_ssl is true) | "./root.crt" |
-| **userName** (M) | Your account username | "user@example.com" |
-| **accessCode** (M) | Your account access code | "your_access_code" |
-| **unitID** (M) | A readable name for your drone that will be displayed | "drone1", "D1-Copter" |
-| **groupID** (*) | Group identifier for your drone | "1" |
-| **unitDescription** (M) | A brief single line description of vehicle | "My X8 Drone" |
-| **logger_enabled** (*) | Enable logging (creates log files in Logs folder) | false |
-| **logger_debug** (*) | Enable debug logging | false |
-| **ping_server_rate_in_ms** (*) | Ping rate to the server in milliseconds | 1500 |
-| **max_allowed_ping_delay_in_ms** (*) | Maximum allowed ping delay before restart attempts | 5000 |
-| **max_offline_count** (*) | Maximum failed reconnection attempts before app exits | 5 |
-| **led_pins_enabled** (*) | Enable power LED indicator (GPIO module only) | true |
-| **buzzer_pins_enabled** (*) | Enable buzzer indicator (GPIO module only) | true |
+| Field Name                    | Description                                                         | Example                                    |
+|-------------------------------|---------------------------------------------------------------------|--------------------------------------------|
+| **module_id**                 | A name and GUID for this module                                     | "MT_1", "COMM_MAIN"                        |
+| **unit_type**                 | Type of unit. Use "control_unit" for drone modules                  | "control_unit"                             |
+| **s2s_udp_listening_ip** (*)  | IP address for the de_comm module to communicate with other modules | "127.0.0.1" if all modules on same board, else "0.0.0.0" |
+| **s2s_udp_listening_port** (*) | UDP port used to communicate with other modules                     | "60000"                                    |
+| **s2s_udp_packet_size** (*)   | Maximum size of UDP packets, should be same value in all modules     | "8192"                                     |
+| **auth_ip** (*)               | Authentication server IP address                                    | "127.0.0.1", "andruav.com", "droneengage.com" |
+| **auth_port** (*)             | Authentication server port (number, not string)                      | 19408                                      |
+| **auth_verify_ssl** (*)       | Enable SSL verification for authentication                          | false                                      |
+| **ignore_original_comm_server** (*) | Don't authenticate and connect directly to a drone server    | false                                      |
+| **root_certificate_path** (*) | Path to SSL certificate (required if auth_verify_ssl is true)       | "./root.crt"                               |
+| **userName** (M)              | Your account username                                               | "user@example.com"                         |
+| **accessCode** (M)            | Your account access code                                            | "your_access_code"                         |
+| **unitID** (M)                | A readable name for your drone that will be displayed               | "drone1", "D1-Copter"                      |
+| **groupID** (*)               | Group identifier for your drone                                     | "1"                                        |
+| **unitDescription** (M)       | A brief single line description of vehicle                          | "My X8 Drone"                              |
+| **logger_enabled** (*)        | Enable logging (creates log files in Logs folder)                  | false                                      |
+| **logger_debug** (*)          | Enable debug logging                                                | false                                      |
+| **ping_server_rate_in_ms** (*) | Ping rate to the server in milliseconds                             | 1500                                       |
+| **max_allowed_ping_delay_in_ms** (*) | Maximum allowed ping delay before restart attempts            | 5000                                       |
+| **max_offline_count** (*)     | Maximum failed reconnection attempts before app exits               | 5                                          |
+| **led_pins_enabled** (*)      | Enable power LED indicator (GPIO module only)                       | true                                       |
+| **buzzer_pins_enabled** (*)   | Enable buzzer indicator (GPIO module only)                           | true                                       |
 
 ## Legend
 
@@ -71,34 +69,34 @@ nano de_comm.config.module.json
     /*
         This is a JSON file with ability to add c-like comments.
     */
-    
+
     // A name and GUID for this module
-    "module_id"                 : "MT_1",
-    "unit_type"                 : "control_unit",
-    
+    "module_id": "MT_1",
+    "unit_type": "control_unit",
+
     // IP & Port Communication Module is listening to.
-    "s2s_udp_listening_ip"      : "0.0.0.0",
-    "s2s_udp_listening_port"    : "60000",  
-    "s2s_udp_packet_size"       : "8192",
+    "s2s_udp_listening_ip": "0.0.0.0",
+    "s2s_udp_listening_port": "60000",
+    "s2s_udp_packet_size": "8192",
 
     // Drone-Engage Communication Server Connection
-    "auth_ip"                       : "127.0.0.1",
-    "auth_port"                     : 19408,
-    "auth_verify_ssl"               : false,
-    "ignore_original_comm_server"   : false,
-    
-    // SSL certificate path (optional if auth_verify_ssl == true)
-    "root_certificate_path"         : "./root.crt",
+    "auth_ip": "127.0.0.1",
+    "auth_port": 19408,
+    "auth_verify_ssl": false,
+    "ignore_original_comm_server": false,
 
-    "userName"                  :"your_email@example.com", 
-    "accessCode"                :"your_access_code",
-    "unitID"                    :"drone_cairo",
-    "groupID"                   :"1",
-    "unitDescription"           :"My Drone Unit 1",
+    // SSL certificate path (optional if auth_verify_ssl == true)
+    "root_certificate_path": "./root.crt",
+
+    "userName": "your_email@example.com",
+    "accessCode": "your_access_code",
+    "unitID": "drone_cairo",
+    "groupID": "1",
+    "unitDescription": "My Drone Unit 1",
 
     // Logger Section
-    "logger_enabled"            : false,
-    "logger_debug"              : false,
+    "logger_enabled": false,
+    "logger_debug": false,
 
     // Connection management
     "ping_server_rate_in_ms": 1500,
@@ -106,8 +104,8 @@ nano de_comm.config.module.json
     "max_offline_count": 5,
 
     // Hardware indicators (GPIO module only)
-    "led_pins_enabled" : true,
-    "buzzer_pins_enabled" : true
+    "led_pins_enabled": true,
+    "buzzer_pins_enabled": true
 }
 ```
 

@@ -8,6 +8,8 @@ Communication Server
 Communication Server function is to exchange communication messages between different units and webclients. It is like a chatting server.
 Communication Server runs as part of Drone-Engage Server modules.
 
+**Important:** The communication server maintains a persistent WebSocket connection to the authenticator. When a drone or web client authenticates, the authenticator requests the communication server to generate a temporary login key. The client then uses this key to establish a WebSocket connection to the communication server.
+
 |
 
 Source Code: `https://github.com/DroneEngage/droneengage_communication <https://github.com/DroneEngage/droneengage_communication>`_

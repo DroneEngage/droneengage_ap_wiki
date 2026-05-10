@@ -665,7 +665,7 @@ Test coverage for:
 - **Main custom plugins page** - [./de-custom-plugins.md](./de-custom-plugins.md)
 - **Python implementation** - [./de-custom-plugins-python.md](./de-custom-plugins-python.md)
 - **Node.js implementation** - [./de-custom-plugins-nodejs.md](./de-custom-plugins-nodejs.md)
-- **C++ core library** - https://github.com/DroneEngage/droneengage_common
+- **C++ core library** - [https://github.com/DroneEngage/droneengage_common](https://github.com/DroneEngage/droneengage_common)
 - **Test examples** - [../../droneengage_databus/client/test/README.md](../../droneengage_databus/client/test/README.md)
 - **Core Library Documentation** - [../../droneengage_databus/client/src/de_common/README.md](../../droneengage_databus/client/src/de_common/README.md)
 - **DroneEngage WebClient** - Access at `http://localhost:8080` (when communicator is running)

@@ -18,6 +18,11 @@ All modules communicate via the **DataBus** using UDP sockets, allowing them to 
 
 - [Building from Source](de-dev-building-code.md)
 
+## Raspberry Pi Deployment
+
+- [Camera Manager Wrapper](https://github.com/DroneEngage/DroneEngage_ScriptWiki/blob/master/rpi_image_scripts/bookworm/wrapper/README.md) - C++ wrapper for managing DroneEngage camera and tracking modules on Raspberry Pi
+- [Raspberry Pi Bookworm Scripts](technicals/rpi-scripts/rpi-bookworm-scripts.md) - Overview of helper scripts for managing DroneEngage services, networking, cameras, simulators, and maintenance on Raspberry Pi OS
+
 ## Architecture
 
 - [Communication Protocol](de-dev-andruav-communication-protocol.md)
@@ -53,6 +58,14 @@ All modules communicate via the **DataBus** using UDP sockets, allowing them to 
 - [Andruav Facade](technicals/communication/de-comm-technicals-facade.md)
 - [Andruav Message Parser](technicals/communication/de-comm-technicals-parser.md)
 - [Configuration File Management](technicals/communication/de-comm-technicals-configfile.md)
+
+## Server Technicals
+
+- [Server Technicals Overview](technicals/server/de-server-technicals.md)
+- [Authentication Server Internals](technicals/server/de-server-technicals-authentication.md)
+- [Communication Server Internals](technicals/server/de-server-technicals-communication.md)
+- [Authentication ↔ Communication Flow](technicals/server/de-server-technicals-auth-comm-flow.md)
+- [Mesh Communication Server Relay](technicals/server/de-server-technicals-mesh-relay.md)
 
 ## MAVLink Module Technicals
 
