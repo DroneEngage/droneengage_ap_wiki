@@ -10,7 +10,7 @@ It orchestrates connection lifecycle, message routing, and system-level commands
 The class follows the **singleton pattern**, ensuring only one instance exists throughout the application. This is critical for centralized communication management in embedded or drone systems where resource coordination is essential.
 
 ```cpp
-13:62:/mnt/8a619ce7-cd3f-4520-af65-7991f16410f7/public_versions/drone_engage/drone_engage_communication_pro/src/comm_server/andruav_comm_server.hpp
+/mnt/8a619ce7-cd3f-4520-af65-7991f16410f7/public_versions/drone_engage/drone_engage_communication_pro/src/comm_server/andruav_comm_server.hpp
 class CAndruavCommServer : public CCallBack_WSASession, public CAndruavCommServerBase
 {
 public:
@@ -81,7 +81,7 @@ The `CAndruavCommServer` is accessed globally via its `getInstance()` method. It
 This real-world example shows how a system message is dispatched using the communication server:
 
 ```cpp
-278:294:/home/mhefny/TDisk/public_versions/drone_engage/drone_engage_communication_pro/src/comm_server/andruav_facade.cpp
+home/mhefny/TDisk/public_versions/drone_engage/drone_engage_communication_pro/src/comm_server/andruav_facade.cpp
 CAndruavCommServer::getInstance().API_sendSystemMessage(
     TYPE_AndruavSystem_LoadTasks, 
     message

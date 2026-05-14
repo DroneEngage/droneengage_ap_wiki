@@ -7,7 +7,7 @@ It determines the connection type—serial, UDP, or TCP—from a configuration f
 ### Definition
 
 ```cpp
-95:135:/mnt/8a619ce7-cd3f-4520-af65-7991f16410f7/public_versions/drone_engage/drone_engage_mavlink/src/fcb_main.cpp
+/mnt/8a619ce7-cd3f-4520-af65-7991f16410f7/public_versions/drone_engage/drone_engage_mavlink/src/fcb_main.cpp
 bool CFCBMain::connectToFCB() {
   m_connection_type = getConnectionType();
 

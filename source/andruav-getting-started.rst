@@ -10,14 +10,17 @@ First you need to have at least an Android mobile that will be mounted on drone.
 You also need to create an account and get **accesscode**. 
 The accesscode will be used to link vehicles and GCS either on mobile or on web.
 
+    
+.. youtube:: sytNIby_Pe8
+
+
 The first time you register in Andruav, you should set Andruav in GCS mode. 
 Then it will go to registration screen where you can enter your email and press Register. An **access code** will be created and placed in the accesscode box. Also it will be sent to you via email -it might appears in the spam section-. 
 
 You can also use `Account Manager <https://cloud.ardupilot.org:8001/accounts.html>`_ page to create a new account.
 
 Please check this video for better understanding 
-    
-.. youtube:: sytNIby_Pe8
+
 
 
 This is another video shows how to register from web. 

@@ -18,4 +18,4 @@ Plugins can be written in:
 
 All plugins communicate with the main DroneEngage system via the DataBus protocol.
 
-See [Custom Plugin Development](./de-custom-plugins.md) for comprehensive custom plugin development guides and [General plugin development guide](./de-dev-plugin.md) for detailed development instructions.
+See [Custom Plugin Development](./technicals/de_common/de-custom-plugins.md) for comprehensive custom plugin development guides and [General plugin development guide](./technicals/de_common/de-dev-plugins.md) for detailed development instructions.

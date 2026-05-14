@@ -9,7 +9,7 @@ For the complete documentation, see the [Raspberry Pi Bookworm Scripts README](h
 - **c_helpers/** - C++ helper utilities including `updateConfig` tool for updating DroneEngage JSON config files with username, access code, and server settings
 - **service/** - Systemd service unit files for DroneEngage modules (de_communicator, de_mavlink, de_camera, etc.)
 - **updates/** - Scripts for configuration backup and OTA updates
-- **wrapper/** - Camera manager wrapper (C++) for orchestrating camera pipelines and tracking modules
+- **wrapper/** - [Camera manager wrapper](https://github.com/DroneEngage/DroneEngage_ScriptWiki/blob/master/rpi_image_scripts/bookworm/wrapper/README.md) (C++) for orchestrating camera pipelines and tracking modules
 - **not_used_but_useful/** - Archive of scripts not currently in use but potentially useful for reference
 
 ## Service Management Scripts

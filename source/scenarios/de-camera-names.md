@@ -78,6 +78,9 @@ This approach enables chaining multiple modules together to create complex video
 
 For Raspberry Pi deployments, DroneEngage provides a [Camera Manager Wrapper](https://github.com/DroneEngage/DroneEngage_ScriptWiki/blob/master/rpi_image_scripts/bookworm/wrapper/README.md) that orchestrates the startup, monitoring, and graceful shutdown of camera pipelines and tracking modules.
 
+
+![Camera Pipeline](../images/camera-pipeline.png)
+
 The wrapper supports:
 - **Process Management**: Forks and monitors child processes for camera pipelines (`rpicam-vid | ffmpeg`), gimbal RTSP streams, tracking modules (`de_tracker`, `de_ai_tracker`, `de_yolo_generic`), and the main camera module (`de_camera`)
 - **Triple AI Architecture**: IMX500 hardware AI, HAILO software AI, and generic YOLO AI processing
