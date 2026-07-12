@@ -33,7 +33,7 @@ Configure audio devices in the plugin configuration file.
 |
 
 .. note::
-   See :ref:`de-dev-plugin` for plugin development and integration details.
+   See :doc:`technicals/de_common/de-dev-plugins` for plugin development and integration details.
 
 |
 

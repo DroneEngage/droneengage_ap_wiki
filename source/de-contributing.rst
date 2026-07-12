@@ -50,7 +50,7 @@ Contribution Steps
 4. **Edit RST Files**:
    - Navigate to the `docs/` folder (or wherever RST files are stored).
    - Edit existing files (e.g., `de-faq.rst`, `de-install-unit.rst`) or create new ones.
-   - Follow RST syntax and reference existing files for style (e.g., use :ref:`de-config-mavlink` for cross-links).
+   - Follow RST syntax and reference existing files for style (e.g., use :doc:`de-config-mavlink` for cross-links).
    - Example: To add a new FAQ, edit `de-faq.rst` and add a numbered entry.
 
 5. **Test Changes Locally**:
@@ -61,7 +61,7 @@ Contribution Steps
         $ ./docker.run.sh
 
    - Output appears in the `./build` folder. Open the generated `index.html` in a browser to preview.
-   - Ensure links (e.g., :ref:`de-glossary`) and formatting work correctly.
+   - Ensure links (e.g., :doc:`glossary`) and formatting work correctly.
 
 6. **Commit and Push**:
    - Commit your changes:
@@ -84,14 +84,14 @@ Testing Changes
 --------------
 
 To ensure your changes render correctly:
-- Run the Docker scripts to build the wiki (see :ref:`de-dev` for related build info).
+- Run the Docker scripts to build the wiki (see :doc:`de-dev` for related build info).
 - Check for broken links or formatting errors in the `./build` folder.
-- If adding code blocks (e.g., JSON in :ref:`de-config-comm`), verify syntax.
+- If adding code blocks (e.g., JSON in :doc:`de-config-comm`), verify syntax.
 
 Contribution Ideas
 -----------------
 
-- **Fix Typos**: Improve clarity in pages like :ref:`de-what-is` or :ref:`de-config-mavlink`.
+- **Fix Typos**: Improve clarity in pages like :doc:`de-what-is` or :doc:`de-config-mavlink`.
 - **Add Tutorials**: Create guides for features like swarm operations (:ref:`de-advanced`) or SITL (:ref:`de-simulators`).
 - **Update Binaries**: Keep installation instructions current (e.g., reference `https://cloud.ardupilot.org/downloads/RPI/Latest/ <https://cloud.ardupilot.org/downloads/RPI/Latest/>`_).
 - **Expand FAQ**: Add questions to :ref:`de-faq` based on user feedback.

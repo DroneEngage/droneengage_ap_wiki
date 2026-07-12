@@ -13,4 +13,4 @@ Schema
 Example
   .. code-block:: json
 
-     {"type":"MISSION_UPLOAD","id":3,"waypoints":[...]}
+     {"type":"MISSION_UPLOAD","id":3,"waypoints":[]}

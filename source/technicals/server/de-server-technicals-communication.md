@@ -1,201 +1,305 @@
-# Communication Server Internals
+# Communication Server Technicals
 
 ## Overview
 
-The Communication Server (`droneengage_server`) is a Node.js application that exchanges communication messages between different units and web clients via WebSocket connections. It maintains a persistent WebSocket connection to the authentication server for coordination.
+DroneEngage Communication Server is the real-time messaging backbone for the DroneEngage/Andruav drone management ecosystem. It handles WebSocket-based communication between drone units and Ground Control Stations (GCS), implements server-to-server mesh relay for scalable message propagation, and supports message routing with group and individual targeting using Ed25519 cryptographic authentication.
 
-## Key Components
+## Tech Stack
 
-### Communication Server Manager (`server/js_comm_server_manager_client.js`)
+- **Runtime**: Node.js >= 18
+- **Web Framework**: Express.js
+- **Database**: MySQL2
+- **Real-time**: WebSocket (ws library)
+- **Authentication**: Ed25519 S2S authentication
+- **UDP**: udp-packet for UDP proxy functionality
+- **Utilities**: lodash, moment, uuid, randomstring, jspack
 
-Acts as a WebSocket client to the authentication server:
+## Architecture
 
-- **Connection**: Connects to `wss://s2s_ws_target_ip:s2s_ws_target_port`
-- **Auto-reconnect**: Automatically reconnects with retry interval (2000ms) on connection loss
-- **Message Handling**: Delegates incoming messages to registered handlers
-- **Message Sending**: Provides `fn_sendMessage()` to send messages to the authentication server
+Three operational modes:
 
-#### Key Functions
+### 1. Standalone Mode
+- Independent server for local communication
+- No S2S relay required
+- Suitable for small-scale operations
 
-- `fn_startServer()` - Starts the WebSocket connection to authentication server
-- `fn_onOpen_Handler()` - Called when connection is established
-- `fn_onClose_Handler()` - Handles connection close and triggers reconnection
-- `fn_onMessage_Handler()` - Delegates incoming messages to `fn_onMessageReceived` callback
-- `fn_sendMessage()` - Sends a message to the authentication server
+### 2. Child Server Mode
+- Connects to parent server for message relay
+- Receives messages from parent
+- Forwards local messages to parent
+- Part of distributed mesh network
 
-### Communication Server (`server/js_andruav_comm_server.js`)
+### 3. Parent (Super) Server Mode
+- Accepts child connections
+- Forwards messages between children
+- Implements mesh relay for scalability
+- Central hub in distributed deployment
 
-Manages the communication server logic and coordination with the authentication server.
+## Core Components
 
-#### Waiting Accounts
+### WebSocket Server
+- Main communication channel for units and GCS
+- Handles client connections with temporary key validation
+- Manages account rooms for message routing
+- Maintains active sender lists
 
-- `m_waitingAccounts` - Map of temporary login keys to pending login requests
-- Keys expire after `CONST_WAIT_PARTY_TO_CONNECT_TIMEOUT` (10000ms)
+### S2S Relay
+- Server-to-server mesh network for message propagation
+- Ed25519 cryptographic authentication
+- Loop prevention using path tracking
+- Message routing between parent and child servers
 
-#### Key Functions
+### UDP Proxy
+- Handles UDP packet forwarding
+- Kernel buffer size checking and adjustment
+- Fixed port configuration option
+- Used for MAVLink and other UDP protocols
 
-- `isLoginExist(p_key)` - Checks if a temporary login key exists in waiting list
-- `getLogin(p_key)` - Retrieves login request by temporary key
-- `deleteLogin(p_key)` - Removes login request from waiting list
-- `fn_addWaitingAccount(p_tempLoginKey, p_LoginRequest)` - Adds a login request to waiting list with timeout
-- `fn_decryptAuthMessage(p_msg)` - Parses JSON message from authentication server
-- `fn_generateLoginRequestReply(p_cmd)` - Generates reply to login request from authentication server
-- `fn_AuthServerConnectionHandler()` - Called when authentication server connection is established
-- `fn_handleLoginResponses(p_cmd)` - Processes login request from authentication server
-- `fn_AuthServerMessagesHandler(p_msg)` - Routes messages from authentication server
-- `fn_updateServerWatchdog()` - Sends server info to authentication server
-- `fn_startServer()` - Initializes and starts the communication server
+### Chat System
+- Message routing and room management
+- Group and individual targeting
+- Active sender tracking
+- Connection lifecycle management
 
-#### `fn_handleLoginResponses()`
+## Key Files
 
-Processes a login request from the authentication server:
+### Core Server Files
+- `server.js` - Main entry point, initializes all servers
+- `server.config` - JSON configuration (supports --config override)
+- `package.json` - Dependencies and scripts
+- `js_constants.js` - Message types, routing constants
 
-1. Generates a temporary login key (UUID without dashes)
-2. Stores the login request in `m_waitingAccounts[tempKey]`
-3. Generates a reply with the temporary key and server connection details
-4. Sends the reply to the authentication server via WebSocket
+### Communication Server Components
+- `server/js_andruav_comm_server.js` - Main WebSocket server
+- `server/js_s2s_auth.js` - Ed25519 S2S authentication
+- `server/js_udp_proxy.js` - UDP packet proxy
+- `server/js_andruavTasks_v2.js` - Task management
 
-#### `fn_generateLoginRequestReply()`
+### Chat System
+- `server/chat_server/js_andruav_chat_server.js` - Chat system singleton
+- `server/chat_server/js_chat_routing.js` - Message routing logic
+- `server/chat_server/js_chat_connection.js` - Connection management
+- `server/chat_server/js_chat_relay.js` - S2S message relay
 
-Builds the JSON reply sent to the authentication server:
+### S2S Components
+- `server/server_to_server/js_parent_comm_server.js` - Parent server S2S
+- `server/server_to_server/js_child_comm_server.js` - Child server S2S
 
-```json
-{
-  "c": "b",
-  "d": {
-    "r": "request-id",
-    "e": 0,
-    "g": "communication-server-host",
-    "h": "communication-server-port",
-    "f": "temporary-login-key"
-  }
-}
-```
+### Helpers
+- `helpers/hlp_args.js` - Argument parsing utilities
+- `helpers/hlp_strings.js` - String manipulation utilities
+- `helpers/hlp_validation.js` - Input validation
+- `helpers/hlp_colors.js` - Console color formatting
 
-#### `fn_updateServerWatchdog()`
+## Configuration
 
-Sends server info to the authentication server:
+Configuration is centralized in `server.config` (JSON format). Key sections:
 
-```json
-{
-  "c": "a",
-  "d": {
-    "isOnline": true,
-    "version": "server-version",
-    "serverId": "server-id",
-    "public_host": "public-host",
-    "serverPort": "server-port",
-    "accounts": ["account-key-1", "account-key-2"]
-  }
-}
-```
-
-This is sent periodically to keep the authentication server updated on the communication server status and served accounts.
-
-### Chat Server (`server/chat_server/js_andruav_chat_server.js`)
-
-Handles WebSocket connections from authenticated clients.
-
-#### `fn_onConnect_Handler(p_ws, p_req)`
-
-Main WebSocket connection handler:
-
-1. Extracts parameters from the request URL
-2. Validates the temporary login key
-3. If valid, accepts the connection and adds the client to the appropriate account room
-
-#### `fn_validateKey(p_params)`
-
-Validates the temporary login key:
-
-- Checks if the key exists in the URL parameters
-- Validates the key format (alphanumeric, max length 200)
-- Checks if the key exists in `m_waitingAccounts`
-- Closes the connection if validation fails
-
-#### `acceptConnection(v_loginTempKey, c_params, p_ws)`
-
-Accepts a validated connection:
-
-1. Retrieves the login request using the temporary key
-2. Builds an onboard object with account ID, group ID, request ID, actor type, permissions
-3. Deletes the temporary key from `m_waitingAccounts` (single-use)
-4. Calls `_acceptConnection()` to add the client to the account room
-5. Notifies the authentication server via `fn_onMessageOpened()`
-
-#### `acceptLocalConnection(c_params, p_ws)`
-
-Accepts a local connection (when `local_server_enabled=true`):
-
-- Used for local server mode without authentication server
-- Generates local account and group IDs
-- Bypasses temporary key validation
-
-## Constants (`js_constants.js`)
-
-Key constants used in communication:
-
-- `CONST_CS_CMD_INFO` - Server info command (`a`)
-- `CONST_CS_CMD_LOGIN_REQUEST` - Login request command (`b`)
-- `CONST_CS_CMD_LOGOUT_REQUEST` - Logout request command (`c`)
-- `CONST_CS_ACCOUNT_ID` - Account ID field (`a`)
-- `CONST_CS_GROUP_ID` - Group ID field (`b`)
-- `CONST_CS_SENDER_ID` - Sender ID field (`s`)
-- `CONST_CS_LOGIN_TEMP_KEY` - Temporary login key field (`f`)
-- `CONST_CS_ERROR` - Error field (`e`)
-- `CONST_CS_SERVER_PUBLIC_HOST` - Server host field (`g`)
-- `CONST_CS_SERVER_PORT` - Server port field (`h`)
-- `CONST_CS_REQUEST_ID` - Request ID field (`r`)
-
-## Configuration (`server.config`)
-
-Key configuration fields:
-
-- `server_id` - Server identifier
+### Server Identity
+- `server_id` - Unique server identifier
 - `server_ip` - Listening IP (default: `::`)
+- `server_port` - Listening port (default: 9966)
 - `public_host` - Public host/IP as seen by clients
 - `server_sid` - Unique server ID for multi-server deployments
-- `server_port` - Listening port (default: 9966)
-- `enable_SSL` - Enable SSL for client connections
-- `s2s_ws_target_ip` - Authentication server IP for S2S connection
-- `s2s_ws_target_port` - Authentication server port for S2S connection
-- `ssl_key_file` - SSL private key file path
-- `ssl_cert_file` - SSL certificate file path
-- `allow_fake_SSL` - Allow fake SSL (for testing only)
-- `ca_cert_path` - Custom CA certificate path
-- `ignore_auth_server` - Ignore authentication server (for local mode)
-- `local_server_enabled` - Enable local server mode
 
-## Connection Flow
+### Database Connection
+- MySQL credentials
+- Connection pool configuration
+- Database name and host
 
-### Server Startup
+### S2S Authentication
+- Ed25519 private key
+- Trusted public keys
+- Authentication server connection details
 
-1. Communication server starts
-2. Connects to authentication server via WebSocket
-3. Sends server info (watchdog) to authentication server
-4. Authentication server marks the communication server as online
+### SSL/TLS
+- SSL certificate paths
+- SSL private key path
+- CA certificate path
+- SSL enable/disable flags
 
-### Client Connection
+### Server Roles
+- `enable_super_server` - Enable parent server mode
+- `enable_persistant_relay` - Enable persistent relay
+- Parent/child server connection details
 
-1. Client authenticates with authentication server
-2. Authentication server requests login reservation from communication server
-3. Communication server generates temporary login key and stores in waiting list
-4. Authentication server returns temporary key and connection details to client
-5. Client connects to communication server WebSocket with temporary key
-6. Communication server validates temporary key
-7. Communication server accepts connection and adds client to account room
-8. Temporary key is deleted (single-use)
+### Logging
+- Log level configuration
+- Log file paths
+- Log rotation settings
 
-## Security Considerations
+### Memory Management
+- `memory_max` - Memory limit in MB
+- Auto-restart on limit exceeded
 
-- Temporary login keys are single-use and expire after timeout
-- SSL/TLS for client connections (configurable)
-- SSL/TLS for S2S connection to authentication server
-- Key validation before accepting WebSocket connections
-- Account room isolation prevents cross-account communication
-- Active sender tracking prevents duplicate connections
+## Coding Standards
 
-## Related Documentation
+### Logging
+- Use `global.m_logger` for logging (if enabled)
+- Check `global.m_logger` existence before use
+- Consistent log format across modules
 
-- [Authentication Server Internals](de-server-technicals-authentication.md)
-- [Authentication ↔ Communication Flow](de-server-technicals-auth-comm-flow.md)
+### Singleton Pattern
+- Use singleton pattern for chat server: `global.m_chat_server_singelton_get_instance()`
+- Ensure thread-safe initialization
+- Document singleton usage
+
+### Global Objects
+- Several modules attached to `global` for easy access
+- Be aware of global state
+- Document global dependencies
+
+### Memory Management
+- Memory monitoring with auto-restart on limit exceeded
+- Prevent memory leaks from causing crashes
+- Monitor memory usage every 60 seconds
+
+### Error Handling
+- Check `global.m_logger` existence before use
+- Implement comprehensive error handling
+- Provide meaningful error messages
+
+### Utilities
+- Reuse utilities in `helpers/` directory
+- Avoid code duplication
+- Follow existing patterns
+
+## Message Routing
+
+Messages routed based on `ty` (type) and `tg` (target) fields:
+
+### Message Types
+- **'g'** (group broadcast) - Send to all members of a group
+- **'i'** (individual) - Send to specific unit ID
+- **'s'** (system/local) - System-level messages
+
+### Message Targets
+- `'_GCS_'` - All Ground Control Stations
+- `'_GD_'` - All drone units
+- `'_AGN_'` - All agents
+- Specific unit ID - Individual targeting
+
+### Loop Prevention
+- Uses `_path` array to track message traversal
+- Prevents infinite message loops
+- Each server adds its ID to path
+
+### Message Forwarding
+- **Local Messages**: Forwarded to relay servers
+- **External Messages**: Delivered locally only (no re-forwarding)
+
+## S2S Authentication
+
+### Ed25519 Cryptographic Signatures
+- Child servers connect to parent with private key
+- Parent servers verify child signatures with trusted public keys
+- Challenge-response authentication flow
+- Keys generated via authenticator's `scripts/gen_s2s_keys.sh`
+
+### Authentication Flow
+1. Child server initiates WebSocket connection
+2. Parent server sends Ed25519 challenge
+3. Child server signs challenge with private key
+4. Parent server verifies signature with trusted public key
+5. Connection established if signature valid
+6. Persistent connection maintained
+
+## Database
+
+MySQL database for persistent storage:
+
+### Tables
+- User accounts
+- Communication server registration
+- Message history (if configured)
+- Task persistence
+
+### Operations
+- Connection pooling
+- Prepared statements
+- Error handling
+- Transaction support
+
+## Development
+
+### Setup
+```bash
+npm install
+cp server.config server.config.local
+# Edit server.config.local
+mkdir -p server/ssl
+openssl req -x509 -newkey rsa:4096 -keyout server/ssl/domain.key -out server/ssl/domain.crt -days 365 -nodes
+npm start
+```
+
+### Testing
+```bash
+npm test
+npm run test:watch
+node --test test/unit/relay.test.js
+```
+
+## Deployment
+
+### Parent Server
+```bash
+./deployment/run_parent.sh
+```
+
+### Child Server
+```bash
+./deployment/run_slave.sh
+```
+
+## Security Features
+
+- SSL/TLS for WebSocket connections
+- Ed25519 cryptographic S2S authentication
+- Configurable trusted server keys
+- Memory limit monitoring with auto-restart
+- UDP proxy with kernel buffer management
+- Temporary login key validation
+- Account room isolation
+
+## UDP Proxy
+
+### Functionality
+- Handles UDP packet forwarding between units
+- Kernel buffer size checking and adjustment
+- Fixed port configuration option
+- Used for MAVLink and other UDP protocols
+
+### Configuration
+- Port configuration
+- Buffer size limits
+- Kernel parameter tuning
+
+## Memory Management
+
+### Monitoring
+- Configurable memory limit (memory_max in MB)
+- Automatic server restart when limit exceeded
+- Memory monitoring every 60 seconds
+- Prevents memory leaks from causing crashes
+
+### Implementation
+- Memory usage tracking
+- Graceful shutdown on restart
+- State preservation where possible
+
+## Related Projects
+
+- `droneegnage_authenticator` - Authentication server
+- `droneengage_communication` - Communication protocol
+- `droneengage_webclient_react` - React web client
+- `droneengage_mavlink` - MAVLink integration
+
+## Documentation
+
+- `README.md` - User-facing documentation
+- `wiki/MessagePropagation.md` - Message routing and relay architecture
+- `wiki/S2SAuthentication.md` - Server-to-server authentication setup
+
+## Version
+
+3.9.11

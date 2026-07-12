@@ -10,7 +10,6 @@ Andruav Telemetry
    :titlesonly:
    :maxdepth: 2
 
-   Andruav Web Plugin </webclient-web-plugin>
    Andruav GCS Telemetry </andruav-gcs-telemetry>
    
 

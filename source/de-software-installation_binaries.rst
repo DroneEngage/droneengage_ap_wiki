@@ -8,7 +8,7 @@ Installing Drone Engage RPI-WZero2 / RPI-4 from Binaries
 
 System installation is straightforward, requiring a functional Raspberry Pi with SSH access.  Raspberry Pi OS can be downloaded from the `official website <https://www.raspberrypi.com/software/operating-systems/>`_. Drone-Engage software packages are available `here <https://cloud.ardupilot.org/downloads/RPI/>`_.
 
-Users wishing to build binaries themselves should consult :ref:`de-dev-building-code`.  
+Users wishing to build binaries themselves should consult :doc:`de-dev-building-code`.  
 
 
 The following video describes installation procedures. It may differ from version to another, but the video includes the main steps.
@@ -22,7 +22,7 @@ Preparing Raspberry
 -------------------
 
 Please use **Raspberry Pi OS (bullseye) 64-bit** to run `compiled binaries <https://cloud.ardupilot.org/downloads/RPI/>`_ of DroneEngage.
-You can still compile your code on other versions check :ref:`de-dev-building-code`.
+You can still compile your code on other versions check :doc:`de-dev-building-code`.
  
 
 

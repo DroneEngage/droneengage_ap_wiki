@@ -39,10 +39,10 @@ DroneEngage Internals
 
 - `Architecture <de-dev-architecture.html>`_
 - `Web Client Technicals <de-dev-webclient.html>`_
-
 - `Communication Module Technicals <de-dev-communication.html>`_
 - `Server Technicals <de-dev-server.html>`_
 - `MAVLink Module Technicals <de-dev-mavlink.html>`_
+- `SWARM System <de-dev-swarm.html>`_
 
 
 Creating Custom Plugins

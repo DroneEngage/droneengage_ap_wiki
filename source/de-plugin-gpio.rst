@@ -26,7 +26,7 @@ The GPIO plugin configuration is stored in ``de_rpi_gpio.config.module.json``.
 |
 
 .. note::
-   This plugin is included in the DroneEngage RPI image. For custom installations, see :ref:`de-dev-plugin` for setup instructions.
+   This plugin is included in the DroneEngage RPI image. For custom installations, see :doc:`technicals/de_common/de-dev-plugins` for setup instructions.
 
 |
 

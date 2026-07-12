@@ -18,7 +18,7 @@ any other module. however it will not be useful, but it will appear on WebClient
 
 As we can see in the above diagram Communicator Module contains -among other components- Module Manager and Telemetry Manager.
 |br|
-|br|- **Telemetry Manager** is the component that is responsible for communicating with other modules, and :ref:`webclient-whatis` via :ref:`srv-communication`. 
+|br|- **Telemetry Manager** is the component that is responsible for communicating with other modules, and :doc:`webclient-whatis` via :doc:`srv-communication`. 
 |br|- **Module Manager** is the component that is responsible for communicating with other modules of the same unit.
 |br|- **Module Manager** is mainly a publisher subscriber module, where each module can subscribe in one or more messages listed in :ref:`de-dev-andruav-communication-protocol-messages` 
 using **message type**. 

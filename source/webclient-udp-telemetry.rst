@@ -9,8 +9,8 @@ Web UDP Telemetry
 
 |
 
-This is not a module that you need to install like :ref:`webclient-web-plugin`. This is a built-in feature in Andruav_AP & DroneEngage as well. 
-The :ref:`srv-communication` creates two sockets, with one socket receiving telemetry data streamed from the drone via UDP, and the other socket allowing the user to connect using UDPCI in Mission Planner or other GCS software.
+This is not a module that you need to install. This is a built-in feature in Andruav_AP & DroneEngage as well. 
+The :doc:`srv-communication` creates two sockets, with one socket receiving telemetry data streamed from the drone via UDP, and the other socket allowing the user to connect using UDPCI in Mission Planner or other GCS software.
 
 You can adjust the telemetry rate on the web client by using the "LVL" feature, which can be helpful if you have a low bandwidth connection. See below.
 
@@ -43,7 +43,7 @@ As demonstrated in the video, the usage of this feature is straightforward. Simp
 |
    The **LVL** section in the WebClient allows for control over the rate of telemetry messages, with level 0 indicating full rate and level 3 indicating the lowest rate. 
    The UDP Proxy can be paused or resumed by clicking the power button, which will turn gray when paused and resume using the same port when restarted. 
-   In DroneEngage, the :ref:`de-config-mavlink` allows for detailed control over these rates.
+   In DroneEngage, the :doc:`de-config-mavlink` allows for detailed control over these rates.
 
 In the JSON configuration file, each message type is configured with maximum rates for streaming. 
 For instance, message id 24 (GPS_RAW_INT) will have zero delay at level 0, an 800ms minimum delay at level 1, a 1-second minimum delay at level 2, and a 2-second minimum delay at level 3. 
@@ -107,7 +107,7 @@ This feature can be enabled in Andruav using the settings.
    :alt: Andruav Settings
    :class: with-border
 
-To enable udp_proxy in DroneEngage, modify the **udp_proxy_enabled** property in the *config.module.json** file of :ref:`de-config-mavlink`. 
+To enable udp_proxy in DroneEngage, modify the **udp_proxy_enabled** property in the *config.module.json** file of :doc:`de-config-mavlink`. 
 The UDP port number for a unit remains fixed as long as the Communication-Server is operational and has not been restarted. 
 If necessary, you can specify a fixed port number using the **udp_proxy_fixed_port** property, 
 but the Communication-Server may override this and allocate a different port based on its own configuration settings.

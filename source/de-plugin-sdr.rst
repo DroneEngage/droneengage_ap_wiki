@@ -35,7 +35,7 @@ The SDR plugin configuration is stored in ``de_sdr.config.module.json``.
 |
 
 .. note::
-   This is an advanced plugin. See :ref:`de-dev-plugin` for development and integration details.
+   This is an advanced plugin. See :doc:`technicals/de_common/de-dev-plugins` for development and integration details.
 
 |
 
