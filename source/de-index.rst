@@ -28,6 +28,7 @@ DroneEngage is a cloud-based companion computer software for Ardupilot-based dro
    Servo Control </webclient-servo>
    SWARM Interface <webclient-swarm>
    UDP-Telemetry </webclient-udp-telemetry>
+   GCS Chat </de-gcs-chat>
    Geo-fencing </de-geo-fencing>
    TX Block </de-tx-block>
    TX Freeze </de-tx-freeze>
