@@ -14,7 +14,7 @@ Before any client can authenticate, the Communication Server establishes a persi
 Communication Server → Comm Server Manager Client: fn_startServer()
 Comm Server Manager Client → Authentication Server: WebSocket connect (wss://s2s_ws_target_ip:s2s_ws_target_port)
 Authentication Server → Comm Server Manager Client: Connection open
-Comm Server Manager Client → Communication Server: fn_onMessageOpened()
+Comm Server Manager Client → Communication Server: fn_updateAuthServer()
 Communication Server → Communication Server: fn_updateServerWatchdog()
 Communication Server → Authentication Server: Send server info (c="a" CONST_CS_CMD_INFO)
 Authentication Server → Auth Comm Server Manager: fn_handleServerInfo()
