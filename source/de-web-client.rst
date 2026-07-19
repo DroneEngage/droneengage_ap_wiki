@@ -20,7 +20,7 @@ Key Features
 - **Video Streaming** - View live video feeds from multiple drones at once
 - **Photo Capture** - Take photos remotely and download them
 - **GamePad Support** - Connect Xbox/PlayStation controllers for smooth remote flying
-- **GCS Integration** - Forward telemetry to Mission Planner or QGroundControl via :ref:`webclient-web-plugin`
+- **GCS Integration** - Forward telemetry to Mission Planner or QGroundControl via UDP proxy
 
 |
 

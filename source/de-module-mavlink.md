@@ -18,11 +18,11 @@ The **MAVLink Module** (`de_mavlink`, binary `de_ardupilot`) is the bridge betwe
 ## Quick links
 
 - [MAVLink configuration](de-config-mavlink.md)
-- [Telemetry optimization](de-telemetry.rst)
-- [Geo-fencing](de-geo-fencing.rst)
-- [Swarm](de-swarm.rst)
-- [TX Block / RC override](de-tx-block.rst)
-- [TX Freeze](de-tx-freeze.rst)
+- [Telemetry optimization](webclient-udp-telemetry.rst)
+- [Geo-fencing](de-geo-fencing.md)
+- [Swarm](de-swarm.md)
+- [TX Block / RC override](de-tx-block.md)
+- [TX Freeze](de-tx-freeze.md)
 
 ## For developers
 
@@ -37,4 +37,4 @@ The **MAVLink Module** (`de_mavlink`, binary `de_ardupilot`) is the bridge betwe
 - **Configuration file**: `de_mavlink.config.module.json`.
 - **Package output**: `build/packages/de-mavlink-plugin-*.deb`, installs to `/home/$USER/drone_engage/de_mavlink/`.
 
-See [MAVLink technicals](technicals/mavlink/index) for architecture, configuration internals, and message handling.
+See [MAVLink technicals](technicals/mavlink/de-mavlink-technicals.md) for architecture, configuration internals, and message handling.

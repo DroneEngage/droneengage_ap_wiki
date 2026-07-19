@@ -168,7 +168,7 @@ This connection is straightforward using UDP. This is suitable when connecting D
 
 The **dynamic** field will make the module search for a valid mavlink port from /dev/ttyUSB0 to /dev/ttyUSB10. So even if you unplug and plug it again and the USB appeared on different address, the module will find it. This feature is developed to be able to detect mavlink port from Scan port.
 
-**baudrate** has to match the baudrate defined in FCB. You can open GSC and configure mavlink parameters.
+**baudrate** has to match the baudrate defined in FCB. You can open GCS and configure mavlink parameters.
 
 > **Important:** You need to connect TX of RPI to RX of the FCB and vice-versa.
 

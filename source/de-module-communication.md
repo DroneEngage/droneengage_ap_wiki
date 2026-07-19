@@ -16,10 +16,10 @@ Every DroneEngage vehicle needs this module. It is the glue between the flight c
 
 ## Quick links
 
-- [Communication configuration](de-config-comm.rst)
+- [Communication configuration](de-config-comm.md)
 - [Custom plugins overview](de-custom-plugins.md)
 - [DataBus protocol](de-dev-databus.md)
-- [Plugin development](de-dev-plugin.rst)
+- [Plugin development](de-dev-plugin.md)
 
 ## For developers
 
@@ -32,4 +32,4 @@ Every DroneEngage vehicle needs this module. It is the glue between the flight c
 - **Configuration file**: `de_comm.config.module.json`.
 - **Package output**: `build/de-communicator-pro-*.deb`, installs to `$HOME/drone_engage/de_comm/`.
 
-See [Communication technicals](technicals/communication/index) for the plugin-broker architecture, message protocol, and build details.
+See [Communication technicals](technicals/communication/de-comm-technicals.md) for the plugin-broker architecture, message protocol, and build details.

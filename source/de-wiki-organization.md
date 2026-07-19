@@ -14,11 +14,6 @@ Easy-to-follow guides for users and operators.
   - Quick start tutorials
   - Basic configuration
 
-- **User Guides** (`de-user-guide-index.md`)
-  - Comprehensive user guide index
-  - Feature guides
-  - Operation manuals
-
 - **Web Client** (`webclient-*.rst`)
   - Web client configuration
   - Gamepad control
@@ -87,7 +82,7 @@ In-depth technical documentation for developers and system administrators.
   - Security best practices
 
 #### Communication Module (`technicals/communication/`)
-- **Technical Overview** (`de-comm-technicals.md`)
+- **Technical Overview** (`de-comm-technicals.rst`)
   - Tech stack and architecture
   - Core components
   - Build instructions
@@ -104,7 +99,7 @@ In-depth technical documentation for developers and system administrators.
   - Usage patterns
 
 #### MAVLink Module (`technicals/mavlink/`)
-- **Technical Overview** (`de-mavlink-technicals.md`)
+- **Technical Overview** (`de-mavlink-technicals.rst`)
   - Tech stack and architecture
   - Key features
   - Vehicle types
@@ -173,7 +168,7 @@ System architecture and design documents.
 
 For developers contributing to DroneEngage:
 
-- **Development Guide** (`de-dev.md`)
+- **Development Guide** (`de-dev.rst`)
   - Building code
   - Testing
   - Contributing guidelines
@@ -209,9 +204,15 @@ Some documentation files are kept for backward compatibility:
 
 ## Navigation
 
-- **Main Index** (`index.rst`) - Main wiki entry point
-- **DE Index** (`de-index.rst`) - DroneEngage specific index
-- **Glossary** (`glossary.rst`) - Terminology and definitions
+The wiki uses a **single-source-of-truth** hierarchy. Each topic appears in exactly one toctree.
+
+- **Main Index** (`index.rst`) - Root entry point with all top-level sections
+- **DE Index** (`de-index.rst`) - DroneEngage operator manual, modules, and configuration
+- **Server Index** (`srv-index.rst`) - Server deployment and administration
+- **Developer Guide** (`de-dev.rst`) - All technical/deep-dive docs including system architecture, module technicals, and plugin development
+- **Andruav Index** (`andruav-index.rst`) - Legacy documentation
+- **Obsolete Index** (`obsolete-index.rst`) - Obsolete pages
+- **Glossary** (`glossary.rst`) - Terminology and definitions (shared, not duplicated)
 
 ## File Naming Conventions
 
@@ -231,3 +232,5 @@ When adding new documentation:
 3. Update the relevant index file
 4. Add cross-references to related documents
 5. Ensure consistent formatting and structure
+6. **Never duplicate a topic across multiple toctree indexes** - each page should appear in exactly one toctree
+7. When both `.rst` and `.md` versions exist, keep only the `.rst` version (Sphinx priority)

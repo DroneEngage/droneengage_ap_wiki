@@ -20,8 +20,6 @@ Andruav Project Website
    Andruav FPV </andruav-fpv>
    Andruav Advanced Features </andruav-advanced>
    Using Andruav with SITL </andruav-simulators>
-     
-   Glossary </andruav-glossary> 
 
 
 

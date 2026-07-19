@@ -5,10 +5,25 @@
 Communication Server
 ====================
 
-Communication Server function is to exchange communication messages between different units and webclients. It is like a chatting server.
-Communication Server runs as part of Drone-Engage Server modules.
+The **Communication Server** is the real-time messaging backbone of DroneEngage. It relays WebSocket messages between drone units and Ground Control Stations, and it can form a server-to-server mesh for scalable deployments.
 
-**Important:** The communication server maintains a persistent WebSocket connection to the authenticator. When a drone or web client authenticates, the authenticator requests the communication server to generate a temporary login key. The client then uses this key to establish a WebSocket connection to the communication server.
+What It Does
+============
+
+- Accepts persistent WebSocket connections from drone units and GCS clients.
+- Routes messages by group or individual target.
+- Provides server-to-server (S2S) relay for multi-region or redundant setups.
+- Offers a UDP proxy for MAVLink and other UDP protocols.
+- Persists tasks and, optionally, message history via MySQL.
+
+The communication server maintains a persistent WebSocket connection to the authenticator. When a drone or web client authenticates, the authenticator requests the communication server to generate a temporary login key. The client then uses this key to establish a WebSocket connection to the communication server.
+
+Deployment Modes
+================
+
+- **Standalone** — single server for local or small deployments.
+- **Child server** — connects to a parent server for relay.
+- **Parent (super) server** — accepts child connections and forwards messages across the mesh.
 
 |
 
@@ -73,5 +88,21 @@ Settings is defined in a file called **server.config** the most important fields
 
 .. warning::
     Although above is a JSON file but you can add comments to the code using // and /* */ blocks.
+
+|
+
+For Developers
+==============
+
+- **Runtime**: Node.js 18+.
+- **Stack**: Express, ``ws``, MySQL2, Ed25519 S2S auth.
+- **Key files**:
+  - ``server.js`` — main entry point.
+  - ``server/js_andruav_comm_server.js`` — WebSocket server.
+  - ``server/chat_server/js_chat_routing.js`` — message routing.
+  - ``server/server_to_server/js_s2s_auth.js`` — Ed25519 S2S authentication.
+- **Configuration**: ``server.config`` (JSON, supports ``--config`` override).
+
+See :ref:`technicals-docs-index` for routing, S2S relay, and configuration details.
 
 

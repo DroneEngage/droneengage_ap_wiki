@@ -10,6 +10,5 @@ Obsolete Pages
    
    Andruav GCS App </andruav-gcs>
    Andruav Telemetry </andruav-telemetry>
-   Drone-Engage Web Plugin (obsolete) </webclient-web-plugin>
    
 .. _home:

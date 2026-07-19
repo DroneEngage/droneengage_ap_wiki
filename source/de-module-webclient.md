@@ -18,12 +18,11 @@ Use the WebClient whenever you need a ground control station accessible from a l
 
 ## Quick links
 
-- [Web Client guide](de-web-client.rst)
-- [Gamepad control](webclient-gamepad.rst)
-- [Swarm control](webclient-swarm.rst)
-- [UDP telemetry forwarding](webclient-udp-telemetry.rst)
-- [Servo control](webclient-servo.rst)
-- [WebPlugin / local deployment](webclient-web-plugin.rst.old)
+- [Web Client guide](de-web-client.md)
+- [Gamepad control](webclient-gamepad.md)
+- [Swarm control](webclient-swarm.md)
+- [UDP telemetry forwarding](webclient-udp-telemetry.md)
+- [Servo control](webclient-servo.md)
 
 ## For developers
 
@@ -33,4 +32,4 @@ Use the WebClient whenever you need a ground control station accessible from a l
 - **Configuration**: `public/config.json` controls endpoints, feature flags, and map providers.
 - **WebConnector**: the `webconnector/` directory contains the local deployment helper.
 
-See [Web Client Technicals](technicals/webclient/index) for deeper architecture and protocol details.
+See [Web Client Technicals](technicals/webclient/de-web-technicals.md) for deeper architecture and protocol details.
