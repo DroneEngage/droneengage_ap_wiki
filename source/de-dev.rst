@@ -11,6 +11,7 @@ This section provides technical documentation for developers who want to build D
    Raspberry Pi Deployment <technicals/rpi-scripts/rpi-bookworm-scripts>
    Architecture <de-dev-architecture>
    Extending DroneEngage <de-dev-extending>
+   MAVLink SDK Library <de-dev-mavlink-sdk>
    Web Client Technicals <technicals/webclient/de-web-technicals>
    Communication Module Technicals <technicals/communication/de-comm-technicals>
    Server Technicals <technicals/server/de-server-technicals>
@@ -56,6 +57,11 @@ Extending DroneEngage
 - :doc:`SWARM Logic <de-dev-swarm>`
 - :doc:`Communication Module Config <de-config-comm>`
 - :doc:`MAVLink Module Config <de-config-mavlink>`
+
+MAVLink SDK Library
+-------------------
+
+- :doc:`MAVLink SDK Library <de-dev-mavlink-sdk>` - Standalone C++17 MAVLink SDK for communicating with ArduPilot-based autopilots
 
 Web Client Technicals
 ---------------------
