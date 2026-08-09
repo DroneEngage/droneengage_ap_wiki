@@ -179,8 +179,7 @@ The server is configured via `server.config` (JSON format). You can create envir
 ```json
 {
     "skip_hardware_validation": true,
-    "andruavSecurityEx": "Andruav Web Panel, Andruav Geo Fence Manager, DRONE ENGAGE Web Client, Andruav Mobile, uavos",
-    "APPVERSION": "{\"andruav\": \"4.00.00\", \"uavos\": \"1.0.0\", \"de\": \"1.0.0\"}"
+    "andruavSecurityEx": "Andruav Web Panel, Andruav Geo Fence Manager, DRONE ENGAGE Web Client, Andruav Mobile, uavos"
 }
 ```
 
@@ -188,7 +187,6 @@ The server is configured via `server.config` (JSON format). You can create envir
 |-----------|------|---------|-------------|
 | `skip_hardware_validation` | boolean | true | Skip hardware ID validation |
 | `andruavSecurityEx` | string | - | Allowed client applications |
-| `APPVERSION` | string | - | JSON string with version info for each app |
 
 ## Example Configuration Files
 
