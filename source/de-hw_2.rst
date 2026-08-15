@@ -23,7 +23,7 @@ Requirements
 |
 
 .. note::
-   DroneEngage is the Linux-based successor to `Andruav <https://cloud.ardupilot.org/downloads/Android/>`_, the Android companion app.
+   Need just a phone instead of a Raspberry Pi? See `Andruav <https://cloud.ardupilot.org/andruav-index.html>`_, DroneEngage's Android-based sibling product.
 
 |
 

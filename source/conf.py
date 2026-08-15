@@ -45,6 +45,11 @@ extensions = [
     #'sphinxcontrib.vimeo', #For vimeo embedding
     'sphinx.ext.autosectionlabel'
 ]
+
+# Namespace autosection labels by document path (e.g. `de-dev:overview`) so
+# repeated headings like "Overview"/"Configuration" across many technicals/
+# pages don't collide into ambiguous, last-write-wins :ref: targets.
+autosectionlabel_prefix_document = True
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templatesx', '_static']
 

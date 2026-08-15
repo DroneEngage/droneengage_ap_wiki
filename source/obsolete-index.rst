@@ -9,6 +9,4 @@ Obsolete Pages
    :maxdepth: 1
    
    Andruav GCS App </andruav-gcs>
-   Andruav Telemetry </andruav-telemetry>
-   
-.. _home:
+   Andruav GCS Telemetry </andruav-gcs-telemetry>

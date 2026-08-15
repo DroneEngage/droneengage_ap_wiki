@@ -103,6 +103,6 @@ For Developers
   - ``server/server_to_server/js_s2s_auth.js`` — Ed25519 S2S authentication.
 - **Configuration**: ``server.config`` (JSON, supports ``--config`` override).
 
-See :ref:`technicals-docs-index` for routing, S2S relay, and configuration details.
+See :doc:`Server Technicals <technicals/server/de-server-technicals>` for routing, S2S relay, and configuration details.
 
 

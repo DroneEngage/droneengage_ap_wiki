@@ -1,48 +1,49 @@
 .. _de-geo-fencing:
 
-=======================
-DroneEngage Geo Fencing
-=======================
+===========
+Geo-Fencing
+===========
 
-Geo Fence means that you define areas where you that is safe for your drone to fly in and other areas that is unsafe or forbidden to fly over them.
+.. note::
+   Works identically on Andruav and DroneEngage — both go through the same :ref:`webclient-whatis`.
 
-This is not GEO fence that Ardupilot support. This Geo-Fencing is controlled by DroneEngage itself not ardupilot. It is very flexible.
+Geo Fence means that you define areas where it is safe for your drone to fly in and other areas that are unsafe or forbidden to fly over.
+
+This is not the GEO fence that Ardupilot supports. This Geo-Fencing is controlled by your unit itself, independent of the flight controller's own fence. It is very flexible.
 
 .. youtube:: URw6F2fcFS4
 
 |
 
-To access Geo-Fence click `https://droneengage.com:8021/mapeditor.html <https://droneengage.com:8021/mapeditor.html>`_ .
+To access Geo-Fence click `https://cloud.ardupilot.org:8001/mapeditor.html <https://cloud.ardupilot.org:8001/mapeditor.html>`_ .
 
-Geo-Fence Manager allows you to design geo-fences and mission plans for multiple drones at the same time. You can even design missions that 
-**interacts** with each others as in the below video. This is **unique**.
+Geo-Fence Manager allows you to design geo-fences and mission plans for multiple drones at the same time. You can even design missions that
+**interact** with each other as in the below video. This is **unique**.
 
 
 .. youtube:: YwEw_YSFVEo
 
 |
 
-In the below image you can see *two* mission plans together with geo-fences regions. There is a green Geo-Fence region but inside it a no fly zone in red. Another no-fly zone exists outside the green area. 
+In the below image you can see *two* mission plans together with geo-fence regions. There is a green Geo-Fence region but inside it a no-fly zone in red. Another no-fly zone exists outside the green area.
 
 .. image:: ./images/_new_map4.png
         :align: center
         :alt: Mission Planner
 
-you can export each mission plan as a file to be uploaded from :ref:`de-web-client`. Geo-Fences on the other side are saves for all the group in the system database.
-Geo-Fences will be active each time DroneEngage Mobile starts until it is deleted by `Geo-Fence editor <https://droneengage.com:8021/mapeditor.html>`_ .
-
-
+You can export each mission plan as a file to be uploaded from :ref:`webclient-whatis`. Geo-Fences, on the other side, are saved for the whole group in the system database.
+Geo-Fences will be active each time your unit starts until it is deleted by the `Geo-Fence editor <https://cloud.ardupilot.org:8001/mapeditor.html>`_ .
 
 
 Rules of Geo-Fence
 ==================
-#. If there is only red *no-fly* zones. then you can fly any where except these areas.
+#. If there are only red *no-fly* zones, then you can fly anywhere except these areas.
 #. If there is one or more *green-fly* zone you need to fly into one of these areas.
 #. A red area can be inside a green area. You always need to be in the green but not in the red.
 
 |
 
-**The following are good fence example:**
+**The following are good fence examples:**
 
 
 .. image:: ./images/good_fence1.png
@@ -57,7 +58,7 @@ Rules of Geo-Fence
 
 |
 
-**The following are bad fence example:**
+**The following are bad fence examples:**
 
 
 .. image:: ./images/bad_fence2.png
@@ -71,11 +72,9 @@ Rules of Geo-Fence
 
 
 
-Also this is a bad situation as green areas are defined and drone is out of it.
+Also this is a bad situation as green areas are defined and the drone is outside of it.
 
 
 .. image:: ./images/bad_fence1.png
    :height: 400px
    :alt: Bad fence example 1
-
-

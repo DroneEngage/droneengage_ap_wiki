@@ -1,4 +1,4 @@
-.. _de-dev-andruav-communication-protocol-messages:
+.. _andruav-communication-protocol-messages:
 
 
 =====================
