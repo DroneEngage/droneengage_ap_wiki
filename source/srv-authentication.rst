@@ -155,4 +155,4 @@ For Developers
 - **Configuration**: ``server.config`` (JSON, supports ``--config`` override).
 - **Database**: SQLite with migrations in ``database/migrations/``.
 
-See :ref:`technicals-docs-index` for the authentication flow, database schema, and API details.
+See :doc:`Server Technicals <technicals/server/de-server-technicals>` for the authentication flow, database schema, and API details.

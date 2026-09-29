@@ -1,3 +1,5 @@
+.. _de-rpi-image-module-updater:
+
 DE Module Updater
 =================
 

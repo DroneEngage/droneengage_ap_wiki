@@ -1,14 +1,16 @@
 .. _de-tx-freeze:
 
-======================
-Drone-Engage TX Freeze
-======================
+=========
+TX Freeze
+=========
 
+.. note::
+   Works identically on Andruav and DroneEngage — both go through the same :ref:`webclient-whatis`.
 
-This command is called from :ref:`de-web-client` only. 
-This function is used to simulate signals from TX. 
-For example if you switch to loiter mode then you need to keep TX throttle at a level to keep your drone from falling. 
-You can set your TX throttle then press TX-Freeze then Andruav will copy the last value from TX and keep using it while your drone is far out of your TX range.
+This command is called from :ref:`webclient-whatis` only.
+This function is used to simulate signals from TX.
+For example if you switch to loiter mode then you need to keep TX throttle at a level to keep your drone from falling.
+You can set your TX throttle then press TX-Freeze then your unit will copy the last value from TX and keep using it while your drone is far out of your TX range.
 
 
 .. image:: ./images/web_telemetry_on.png
@@ -18,7 +20,5 @@ You can set your TX throttle then press TX-Freeze then Andruav will copy the las
 
 .. warning::
 
-    This is a very critical feature to use. As it will make your TX unable to communicate with your drone. 
+    This is a very critical feature to use. As it will make your TX unable to communicate with your drone.
     However :ref:`de-tx-block` can override this button.
-
-

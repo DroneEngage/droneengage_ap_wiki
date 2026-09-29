@@ -192,15 +192,14 @@ Server deployment and installation guides:
 - **Communication** (`srv-communication.rst`)
 - **Installation** (`srv-install-*.rst`)
 
-## Legacy Documentation
+## Deprecated Documentation
 
-Some documentation files are kept for backward compatibility:
+A small number of pages document features that were actually removed
+(not just renamed/moved) — currently only the old Andruav GCS-mode UI:
 
-- **Andruav Documentation** (`andruav-*.rst`)
-  - Original Andruav system docs
-  - Protocol messages
-  - FAQ
-  - Getting started
+- `andruav-gcs.rst`, `andruav-gcs-telemetry.rst` — superseded by the
+  WebClient (`webclient-whatis.rst`, `webclient-udp-telemetry.rst`).
+  Linked from `obsolete-index.rst`, not from top-level nav.
 
 ## Navigation
 
@@ -210,8 +209,8 @@ The wiki uses a **single-source-of-truth** hierarchy. Each topic appears in exac
 - **DE Index** (`de-index.rst`) - DroneEngage operator manual, modules, and configuration
 - **Server Index** (`srv-index.rst`) - Server deployment and administration
 - **Developer Guide** (`de-dev.rst`) - All technical/deep-dive docs including system architecture, module technicals, and plugin development
-- **Andruav Index** (`andruav-index.rst`) - Legacy documentation
-- **Obsolete Index** (`obsolete-index.rst`) - Obsolete pages
+- **Andruav Index** (`andruav-index.rst`) - Andruav (phone-based) product docs, sibling to DE Index
+- **Obsolete Index** (`obsolete-index.rst`) - Deprecated pages (old Andruav GCS-mode UI only)
 - **Glossary** (`glossary.rst`) - Terminology and definitions (shared, not duplicated)
 
 ## File Naming Conventions

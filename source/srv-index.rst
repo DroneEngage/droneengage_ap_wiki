@@ -16,5 +16,3 @@ Andruav & Drone-Engage Backend Server
     Communication Server </srv-communication>
     How to Install </srv-Installation>
 
-.. _home:
-

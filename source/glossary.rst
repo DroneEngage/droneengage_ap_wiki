@@ -18,7 +18,7 @@ This glossary defines key terms used throughout the DroneEngage and Andruav docu
         A system-generated password used with your email to authenticate devices on the DroneEngage server. Obtain yours from `Accounts @ cloud.ardupilot.org <https://cloud.ardupilot.org:8001/accounts.html>`_. Sharing your Access Code allows others to join your account (useful for shared GCS operations).
 
     Andruav
-        `Andruav <https://play.google.com/store/apps/details?id=arudpilot.andruav&hl=en&gl=US>`_ is the Android-based predecessor to DroneEngage. It runs on Android phones mounted on drones. DroneEngage is the Linux-based evolution designed for Raspberry Pi.
+        `Andruav <https://play.google.com/store/apps/details?id=arudpilot.andruav&hl=en&gl=US>`_ is the Android-based sibling product to DroneEngage in the Ardupilot Cloud EcoSystem. It runs on an Android phone mounted on the drone, so you need only a phone (not a Raspberry Pi) to get started — see :ref:`andruav-index`.
 
     Ardupilot
         Open-source autopilot software that runs on :term:`FCB` hardware. Supports Copter, Plane, Rover, and Sub vehicles. See `ardupilot.org <https://ardupilot.org/>`_.

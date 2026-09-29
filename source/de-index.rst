@@ -15,7 +15,8 @@ DroneEngage is a cloud-based companion computer software for Ardupilot-based dro
    :titlesonly:
    :maxdepth: 1
 
-   Web Client </de-web-client>
+   Web Client </webclient-whatis>
+   WebClient Mobile View </webclient-mobile>
    UDP Telemetry Forwarding </webclient-udp-telemetry>
    GamePad </webclient-gamepad>
    Servo Control </webclient-servo>
@@ -42,5 +43,3 @@ DroneEngage is a cloud-based companion computer software for Ardupilot-based dro
 
    Communication Configuration </de-config-comm>
    MAVLink Configuration </de-config-mavlink>
-
-.. _home:

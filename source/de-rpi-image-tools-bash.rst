@@ -1,4 +1,4 @@
-.. _de-rpi-image-module-updater:
+.. _de-rpi-image-tools-bash:
 
 DE APP Management
 =================

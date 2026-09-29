@@ -31,7 +31,7 @@ What's Next?
 After completing the installation:
 
 - **Configure your unit** using the :ref:`de-rpi-image-tools` web interface
-- **Connect to the Web Client** at `https://droneengage.com:8021/webclient.html <https://droneengage.com:8021/webclient.html>`_
+- **Connect to the Web Client** — see :ref:`webclient-whatis`
 - **Test with SITL** before flying - see :ref:`de-simulators`
 
 
